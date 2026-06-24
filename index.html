@@ -7,240 +7,139 @@
 <title>Creatividades de la semana — Smileat</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --blue:      #29ABE2;
-  --blue-dark: #0D7BB5;
-  --blue-pale: #E8F6FD;
-  --green:     #8CC63F;
-  --green-dark:#5A8A1A;
-  --green-pale:#EEF7E0;
-  --red:       #E8413B;
-  --red-dark:  #A8201A;
-  --red-pale:  #FDECEA;
-  --gray-bg:   #F4F8FB;
-  --gray-100:  #E8EFF4;
-  --gray-500:  #7A9AAD;
-  --gray-700:  #3A5566;
-  --gray-900:  #1A2E38;
-  --font: 'Nunito', 'Century Gothic', sans-serif;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#29ABE2;--blue-dark:#0D7BB5;--blue-pale:#E8F6FD;
+  --green:#8CC63F;--green-dark:#5A8A1A;--green-pale:#EEF7E0;
+  --red:#E8413B;--red-dark:#A8201A;--red-pale:#FDECEA;
+  --orange:#F7941D;
+  --gray-bg:#F4F8FB;--gray-100:#E8EFF4;--gray-500:#7A9AAD;--gray-700:#3A5566;--gray-900:#1A2E38;
+  --font:'Nunito','Century Gothic',sans-serif;
 }
-body { font-family: var(--font); background: var(--gray-bg); color: var(--gray-900); padding-bottom: 3rem; }
+body{font-family:var(--font);background:var(--gray-bg);color:var(--gray-900);padding-bottom:3rem}
 
 /* HEADER */
-.hdr {
-  background: var(--blue); padding: 0 2rem; height: 60px;
-  display: flex; align-items: center; justify-content: space-between;
-  position: sticky; top: 0; z-index: 100;
-}
-.logo {
-  display: inline-flex; align-items: center;
-  background: #fff; border-radius: 14px 14px 14px 3px;
-  padding: 5px 14px 5px 12px;
-}
-.logo span { font-size: 18px; font-weight: 800; color: var(--blue); letter-spacing: -0.02em; text-transform: uppercase; }
-.logo-sub {
-  font-size: 11px; font-weight: 700; color: var(--blue-dark);
-  letter-spacing: .1em; text-transform: uppercase;
-  margin-left: 8px; border-left: 1.5px solid #B3DFF5; padding-left: 8px;
-}
-.wnav { display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,.15); border-radius: 10px; padding: 4px 6px; }
-.wnav button {
-  background: rgba(255,255,255,.2); border: none; border-radius: 7px;
-  width: 28px; height: 28px; cursor: pointer; font-size: 14px; font-weight: 800;
-  color: #fff; display: flex; align-items: center; justify-content: center;
-}
-.wnav button:hover:not(:disabled) { background: rgba(255,255,255,.35); }
-.wnav button:disabled { opacity: .3; cursor: default; }
-.wnav .wlabel { font-size: 13px; font-weight: 700; color: #fff; min-width: 155px; text-align: center; padding: 0 4px; }
+.hdr{background:var(--blue);padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{display:inline-flex;align-items:center;background:#fff;border-radius:14px 14px 14px 3px;padding:5px 14px 5px 12px}
+.logo span{font-size:18px;font-weight:800;color:var(--blue);letter-spacing:-.02em;text-transform:uppercase}
+.logo-sub{font-size:11px;font-weight:700;color:var(--blue-dark);letter-spacing:.1em;text-transform:uppercase;margin-left:8px;border-left:1.5px solid #B3DFF5;padding-left:8px}
+.wnav{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.15);border-radius:10px;padding:4px 6px}
+.wnav button{background:rgba(255,255,255,.2);border:none;border-radius:7px;width:28px;height:28px;cursor:pointer;font-size:14px;font-weight:800;color:#fff;display:flex;align-items:center;justify-content:center}
+.wnav button:hover:not(:disabled){background:rgba(255,255,255,.35)}
+.wnav button:disabled{opacity:.3;cursor:default}
+.wnav .wlabel{font-size:13px;font-weight:700;color:#fff;min-width:155px;text-align:center;padding:0 4px}
 
 /* MAIN */
-.main { max-width: 1280px; margin: 0 auto; padding: 1.75rem 1.5rem; }
+.main{max-width:1280px;margin:0 auto;padding:1.75rem 1.5rem}
 
 /* SUMMARY */
-.summary { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 2rem; }
-.scard { background: #fff; border-radius: 14px; padding: 12px 16px; border-bottom: 3px solid var(--blue); }
-.scard .lbl { font-size: 10px; font-weight: 700; color: var(--blue-dark); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
-.scard .val { font-size: 20px; font-weight: 800; letter-spacing: -.02em; }
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:2rem}
+.scard{background:#fff;border-radius:14px;padding:12px 16px;border-bottom:3px solid var(--blue)}
+.scard .lbl{font-size:10px;font-weight:700;color:var(--blue-dark);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.scard .val{font-size:20px;font-weight:800;letter-spacing:-.02em}
+.scard .wow{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;margin-top:5px;padding:2px 8px;border-radius:20px}
+.scard .wow.up{background:var(--green-pale);color:var(--green-dark)}
+.scard .wow.down{background:var(--red-pale);color:var(--red-dark)}
+.scard .wow.flat{background:var(--gray-100);color:var(--gray-500)}
+/* for CPA: lower is better */
+.scard .wow.good{background:var(--green-pale);color:var(--green-dark)}
+.scard .wow.bad{background:var(--red-pale);color:var(--red-dark)}
 
 /* SECTION */
-.sec-hdr { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
-.badge {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 11px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase;
-  padding: 5px 14px 5px 10px; border-radius: 10px 10px 10px 3px;
-}
-.badge.top-v  { background: var(--green); color: #fff; }
-.badge.top-i  { background: var(--blue);  color: #fff; }
-.badge.bot-v  { background: var(--red);   color: #fff; }
-.badge.bot-i  { background: #F7941D;      color: #fff; }
-.sec-sub { font-size: 12px; font-weight: 600; color: var(--gray-500); }
-.divider { height: 2px; background: linear-gradient(to right, #B3DFF5, transparent); margin: 1.75rem 0; border-radius: 2px; }
+.sec-hdr{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:5px 14px 5px 10px;border-radius:10px 10px 10px 3px}
+.badge.top-v{background:var(--green);color:#fff}
+.badge.top-i{background:var(--blue);color:#fff}
+.badge.bot-v{background:var(--red);color:#fff}
+.badge.bot-i{background:var(--orange);color:#fff}
+.sec-sub{font-size:12px;font-weight:600;color:var(--gray-500)}
+.divider{height:2px;background:linear-gradient(to right,#B3DFF5,transparent);margin:1.75rem 0;border-radius:2px}
 
-/* GRID — 5 cols */
-.grid5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: .5rem; }
+/* GRID 5 */
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:.5rem}
 
 /* CARD */
-.card {
-  background: #fff; border-radius: 14px; overflow: hidden;
-  display: flex; flex-direction: column; cursor: pointer;
-  transition: transform .18s, box-shadow .18s;
-  box-shadow: 0 2px 6px rgba(41,171,226,.08);
-}
-.card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(41,171,226,.18); }
-.card.top-v, .card.top-i  { border-top: 3px solid var(--green); }
-.card.top-i                { border-top-color: var(--blue); }
-.card.bot-v                { border-top: 3px solid var(--red); }
-.card.bot-i                { border-top: 3px solid #F7941D; }
+.card{background:#fff;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:transform .18s,box-shadow .18s;box-shadow:0 2px 6px rgba(41,171,226,.08)}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(41,171,226,.18)}
+.card.top-v,.card.top-i{border-top:3px solid var(--green)}
+.card.top-i{border-top-color:var(--blue)}
+.card.bot-v{border-top:3px solid var(--red)}
+.card.bot-i{border-top:3px solid var(--orange)}
 
-/* PREVIEW AREA — video = 9:16, image = 1:1 */
-.preview-wrap {
-  position: relative; width: 100%; overflow: hidden;
-  background: var(--gray-bg);
-}
-.preview-wrap.vid { padding-top: 177.78%; } /* 9:16 */
-.preview-wrap.img { padding-top: 100%; }    /* 1:1 */
-
-.preview-wrap iframe {
-  position: absolute; top: 50%; left: 50%;
-  width: 320px; height: 525px;
-  border: none; pointer-events: none;
-}
-
-.no-prev {
-  position: absolute; inset: 0;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 8px; background: #EEF6FB;
-}
-.no-prev svg { opacity: .4; }
-.no-prev span { font-size: 10px; font-weight: 700; color: var(--gray-500); }
-
-.rank {
-  position: absolute; top: 7px; left: 7px; z-index: 2;
-  width: 24px; height: 24px; border-radius: 50% 50% 50% 6px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 800; color: #fff;
-}
-.rank.top-v,.rank.top-i { background: var(--green); }
-.rank.top-i             { background: var(--blue); }
-.rank.bot-v             { background: var(--red); }
-.rank.bot-i             { background: #F7941D; }
-
-.type-tag {
-  position: absolute; top: 7px; right: 7px; z-index: 2;
-  background: rgba(26,46,56,.6); color: #fff;
-  font-size: 8px; font-weight: 800; letter-spacing: .07em;
-  padding: 2px 6px; border-radius: 5px; text-transform: uppercase;
-}
+/* PREVIEW */
+.preview-wrap{position:relative;width:100%;overflow:hidden;background:var(--gray-bg)}
+.preview-wrap.vid{padding-top:177.78%}
+.preview-wrap.img{padding-top:100%}
+.preview-wrap iframe{position:absolute;top:50%;left:50%;width:320px;height:525px;border:none;pointer-events:none}
+.no-prev{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:#EEF6FB}
+.no-prev span{font-size:10px;font-weight:700;color:var(--gray-500)}
+.rank{position:absolute;top:7px;left:7px;z-index:2;width:24px;height:24px;border-radius:50% 50% 50% 6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff}
+.rank.top-v,.rank.top-i{background:var(--green)}
+.rank.top-i{background:var(--blue)}
+.rank.bot-v{background:var(--red)}
+.rank.bot-i{background:var(--orange)}
+.type-tag{position:absolute;top:7px;right:7px;z-index:2;background:rgba(26,46,56,.6);color:#fff;font-size:8px;font-weight:800;letter-spacing:.07em;padding:2px 6px;border-radius:5px;text-transform:uppercase}
 
 /* CARD BODY */
-.cbody { padding: 10px; flex: 1; display: flex; flex-direction: column; gap: 7px; }
-.ad-name {
-  font-size: 11px; font-weight: 700; color: var(--gray-900); line-height: 1.35;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-}
-.ad-meta { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
-.meta-date { font-size: 10px; font-weight: 600; color: var(--gray-500); }
-.days-pill { font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 20px; background: var(--blue-pale); color: var(--blue-dark); }
-.metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
-.m { border-radius: 8px; padding: 6px 8px; background: var(--gray-bg); border: 1.5px solid var(--gray-100); }
-.m-lbl { font-size: 8px; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 1px; }
-.m-val { font-size: 12px; font-weight: 800; color: var(--gray-900); }
-.m-val.g { color: var(--green-dark); }
-.m-val.r { color: var(--red-dark); }
+.cbody{padding:10px;flex:1;display:flex;flex-direction:column;gap:7px}
+.ad-name{font-size:11px;font-weight:700;color:var(--gray-900);line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ad-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.meta-date{font-size:10px;font-weight:600;color:var(--gray-500)}
+.days-pill{font-size:9px;font-weight:700;padding:1px 6px;border-radius:20px;background:var(--blue-pale);color:var(--blue-dark)}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.m{border-radius:8px;padding:6px 8px;background:var(--gray-bg);border:1.5px solid var(--gray-100)}
+.m-lbl{font-size:8px;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1px}
+.m-val{font-size:12px;font-weight:800;color:var(--gray-900)}
+.m-val.g{color:var(--green-dark)}
+.m-val.r{color:var(--red-dark)}
 
-/* ── MODAL ── */
-.modal-overlay {
-  display: none;
-  position: fixed; inset: 0; z-index: 999;
-  background: rgba(13,30,40,.7);
-  align-items: center; justify-content: center;
-  padding: 1rem;
-}
-.modal-overlay.open { display: flex; }
+/* ADS MANAGER LINK */
+.am-link{display:flex;align-items:center;justify-content:center;gap:4px;font-size:9px;font-weight:700;color:var(--gray-500);text-decoration:none;padding:4px 0 2px;letter-spacing:.03em;border-top:1px solid var(--gray-100);margin-top:auto}
+.am-link:hover{color:var(--blue)}
+.am-link svg{flex-shrink:0}
 
-.modal {
-  background: #fff; border-radius: 20px;
-  display: flex; gap: 0; overflow: hidden;
-  max-height: 90vh; width: 100%; max-width: 860px;
-  position: relative;
-}
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:999;background:rgba(13,30,40,.75);align-items:center;justify-content:center;padding:1rem}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:20px;display:flex;overflow:hidden;max-height:90vh;width:100%;max-width:860px;position:relative}
+.modal-media{flex-shrink:0;background:#1A2E38;display:flex;align-items:center;justify-content:center}
+.modal-media.vid{width:320px}
+.modal-media.img{width:420px}
+.modal-media iframe{display:block;border:none;pointer-events:auto}
+.modal-media.vid iframe{width:320px;height:568px}
+.modal-media.img iframe{width:420px;height:420px}
+.modal-no-prev{width:100%;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--gray-500);font-size:12px;font-weight:700}
+.modal-info{flex:1;padding:1.5rem;overflow-y:auto;display:flex;flex-direction:column;gap:1rem;min-width:0}
+.modal-close{position:absolute;top:14px;right:14px;z-index:10;background:var(--gray-100);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:var(--gray-700)}
+.modal-close:hover{color:var(--gray-900)}
+.modal-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:8px 8px 8px 2px}
+.modal-title{font-size:15px;font-weight:800;color:var(--gray-900);line-height:1.4}
+.modal-date{font-size:12px;font-weight:600;color:var(--gray-500)}
+.modal-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.modal-m{background:var(--gray-bg);border:1.5px solid var(--gray-100);border-radius:10px;padding:10px 12px}
+.modal-m .lbl{font-size:10px;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+.modal-m .val{font-size:20px;font-weight:800;color:var(--gray-900)}
+.modal-m .val.g{color:var(--green-dark)}
+.modal-m .val.r{color:var(--red-dark)}
+.modal-am{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--blue);text-decoration:none;padding:8px 14px;border-radius:8px;border:1.5px solid var(--blue-pale);background:var(--blue-pale);margin-top:.5rem}
+.modal-am:hover{background:#d0ecf9}
 
-.modal-media {
-  flex-shrink: 0;
-  background: #1A2E38;
-  display: flex; align-items: center; justify-content: center;
-}
-.modal-media.vid { width: 320px; }
-.modal-media.img { width: 400px; }
-
-.modal-media iframe {
-  display: block;
-  border: none;
-  pointer-events: auto;
-}
-.modal-media.vid iframe { width: 320px; height: 568px; }
-.modal-media.img iframe { width: 400px; height: 400px; }
-
-.modal-no-prev {
-  width: 100%; height: 100%;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 10px; color: var(--gray-500); font-size: 12px; font-weight: 700;
-}
-
-.modal-info {
-  flex: 1; padding: 1.5rem; overflow-y: auto;
-  display: flex; flex-direction: column; gap: 1rem;
-  min-width: 0;
-}
-
-.modal-close {
-  position: absolute; top: 14px; right: 14px; z-index: 10;
-  background: var(--gray-100); border: none; border-radius: 50%;
-  width: 32px; height: 32px; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 16px; font-weight: 700; color: var(--gray-700);
-}
-.modal-close:hover { background: var(--gray-100); color: var(--gray-900); }
-
-.modal-badge {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
-  padding: 4px 12px; border-radius: 8px 8px 8px 2px; width: fit-content;
-}
-.modal-title { font-size: 15px; font-weight: 800; color: var(--gray-900); line-height: 1.4; }
-.modal-date  { font-size: 12px; font-weight: 600; color: var(--gray-500); }
-
-.modal-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.modal-m { background: var(--gray-bg); border: 1.5px solid var(--gray-100); border-radius: 10px; padding: 10px 12px; }
-.modal-m .lbl { font-size: 10px; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 3px; }
-.modal-m .val { font-size: 20px; font-weight: 800; color: var(--gray-900); }
-.modal-m .val.g { color: var(--green-dark); }
-.modal-m .val.r { color: var(--red-dark); }
-
-.footer { text-align: center; margin-top: 2.5rem; font-size: 11px; font-weight: 600; color: var(--gray-500); }
+.footer{text-align:center;margin-top:2.5rem;font-size:11px;font-weight:600;color:var(--gray-500)}
 </style>
 </head>
 <body>
-
 <header class="hdr">
-  <div class="logo">
-    <span>SMILEAT</span>
-    <span class="logo-sub">Creatividades</span>
-  </div>
+  <div class="logo"><span>SMILEAT</span><span class="logo-sub">Creatividades</span></div>
   <div class="wnav">
     <button id="bprev">&#8592;</button>
     <div class="wlabel" id="wlabel">—</div>
     <button id="bnext" disabled>&#8594;</button>
   </div>
 </header>
-
 <main class="main" id="main"></main>
-<footer class="footer">Meta Ads · Cuenta 1376434332643791 · Ordenado por purchases · Smileat 2026</footer>
-
-<!-- MODAL -->
+<footer class="footer">Meta Ads · Cuenta 1376434332643791 · Smileat 2026</footer>
 <div class="modal-overlay" id="modal-overlay">
-  <div class="modal" id="modal">
+  <div class="modal">
     <button class="modal-close" id="modal-close">✕</button>
     <div class="modal-media" id="modal-media"></div>
     <div class="modal-info" id="modal-info"></div>
@@ -248,213 +147,270 @@ body { font-family: var(--font); background: var(--gray-bg); color: var(--gray-9
 </div>
 
 <script>
+const AM_BASE = "https://adsmanager.facebook.com/adsmanager/manage/ads?act=1376434332643791&selected_ad_ids=";
+
 const WEEKS = {
-  "2026-06-16": {
-    ads: [
-      { name:"VID_Genérico- Promo - Junio 2026 - 25% en packs - Copia",   created:"2026-06-15", spend:1230.73, purchases:236, ctr:0.71, cpa:5.21,  type:"VID",
-        iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJIpez8-DMvYEuJquy8h3iU6tEgDyx_xpvV7ytixAEGEm-c9d1p0FBuNfXr2KBLeKpGkzFPpQQn_uOSWwz_7aEeC2gkeMAISm49kity3NJurNHNE0Y-UyvrnuD0_a5RtzVAoTTwFgHggjx6rAaQC4Wo1ZzYikySZznCH63BWeijn6_LP0a-xnWTeZph69bjMKcm8XDqTBEeQ1Jj3I6TCI91&t=AQINi7yX69s3LsJ_iy8" },
-      { name:"VID_UGC_PROS_Smilados",                                      created:"2026-04-30", spend:344.87,  purchases:148, ctr:0.77, cpa:2.33,  type:"VID",
-        iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQI4CSMnZUUWnrvNf4xqK0sSKwAkUP2LefvAWD9I-_pzx_11xkvzD5qlImE69LM07kKgNGDjsaZ73pt176HUL1MGVzWZIWvGdetJya9ixZtfnOuqx7xIIORJiOekGmNDkwam4JJH3b50RKpis0MYUIIFaTnGkaiYsDJBYSGBp7nV1WyKEvY8Dvm0oE0huqzUuThQfqtSwu1e9mfFqbpb6E8s&t=AQJ56zRao9734QQN9A8" },
-      { name:"VID_Dudas Tarritos - Copia",                                 created:"2026-06-11", spend:2026.30, purchases:81,  ctr:2.45, cpa:25.02, type:"VID", iframe:null },
-      { name:"VID - Suscripción Hook 1 \"Sabias que puedes tener\"",       created:"2026-04-13", spend:670.02,  purchases:81,  ctr:1.07, cpa:8.27,  type:"VID", iframe:null },
-      { name:"VID_Genérico- Promo - Junio 2026 - 25% en packs",           created:"2026-06-15", spend:863.71,  purchases:77,  ctr:0.66, cpa:11.22, type:"VID", iframe:null },
-      { name:"VID_UGC- Gazpazchito - Hook 2",                             created:"2026-06-11", spend:614.98,  purchases:76,  ctr:1.08, cpa:8.09,  type:"VID", iframe:null },
-      { name:"VID_Consumo_Smilados- Promo - Junio 2026 - 25% en packs",  created:"2026-06-15", spend:186.85,  purchases:57,  ctr:0.68, cpa:3.28,  type:"VID", iframe:null },
-      { name:"VID_Consumo_Smilados- Promo - 25% en packs (v2)",           created:"2026-06-15", spend:75.89,   purchases:10,  ctr:0.69, cpa:7.59,  type:"VID", iframe:null },
-      { name:"VID_UGC- Gazpazchito - Hook 1 \"Con este calor\"",          created:"2026-06-11", spend:49.87,   purchases:9,   ctr:0.95, cpa:5.54,  type:"VID", iframe:null },
-      { name:"VID_Lanzamiento Gazpachito",                                 created:"2026-05-05", spend:0,       purchases:1,   ctr:0,    cpa:0,     type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKipGVlWmHLkHhaAeS_sT58GrSYNIqPAKnv_5IcPNaojq__1AbElK9p-XoKrovtqfokBzg85RQjGgQbxXTdM41GSQlEr0Ll-DM0cLserPt3RCAnBaph2nZbI4Tzkzp_PsLTrSLKVqhdNH6MoRP7GAaMmuw8WvYiqG0hzoJ5pM2dNOO4gIffDGs5ymFBQjSDgTf-tkNKPjzrFIgCfJVs0mX9&t=AQIIyg2qqI52IHCAIaM" },
-      { name:"VID_Paid_Partnership_Juan Llorca_Gazpachito",               created:"2026-06-22", spend:71.76,   purchases:2,   ctr:2.28, cpa:35.88, type:"VID", iframe:null },
-      { name:"VID - Suscripción Hook 2 \"Si tienes un bebé...\"",         created:"2026-04-13", spend:31.86,   purchases:2,   ctr:1.07, cpa:15.93, type:"VID",
-        iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJTfadXZDQQYkUW8bW3OdDiiMOEQ5NZfmc0Qu2RCyie6GxRFQrKl3fxduStq2ticDK13EYu2M3Z0uJSrsnAS4R4nEa_mbXsh4wAWn8dbXtllmoiVjBQklW7PbPDJfmwdUCF4yycc_EgjIlcGfZ8mK1cOxarcqp1H5RIln3ce4O3idihG53PGinruVIhVzcb9_RezT_1lD3DO839aq1K6T8m&t=AQJjKwbONGHRJ69d7iY" },
-      { name:"IMG 2 - 25% Descuento junio 2026",                           created:"2026-06-19", spend:938.92,  purchases:142, ctr:0.92, cpa:6.61,  type:"IMG",
-        iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQK_zFHUnr2kVA0tZSVZVfOt-TTfatIMAHvad-0AGEuYZ13RvreRcKEG2WAXo0m51K783QXi8k2YPsjHk4Ta6QIkLLDbNcF3F6Bv-e66bMfPp8De9AOHPwYZ6wptqpuUC5CGCqxmyBNol-2pwEOC4BPLiFr8OxgnQPRL7Q2XlckXbHLXue-3RA5ySXIrAC2IEuRPlABoNaAkgTtOrYm8C59G&t=AQJeyHYDRmRxcD0hG3w" },
-      { name:"IMG - 25% Descuento junio 2026",                            created:"2026-06-19", spend:60.94,   purchases:21,  ctr:1.18, cpa:2.90,  type:"IMG", iframe:null },
-      { name:"IMG 1 - 25% Descuento junio 2026",                          created:"2026-06-19", spend:45.90,   purchases:5,   ctr:1.18, cpa:9.18,  type:"IMG", iframe:null },
-      { name:"IMA_Comparativa platitos - macarrones - Copia",             created:"2026-06-11", spend:4.16,    purchases:1,   ctr:1.80, cpa:4.16,  type:"IMG",
-        iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJRYS7V1lCiK-BbzusbqcymMQ1-acHujrMGCAz5vAz3tcrGzuNbO4xTFAIJIfZkEpfKQsvchOpbZhcSPNl513pQqIkxs04BblxElyNOY9gV3khUkkdG1o_zU10GZ9_RQCogUubKJ8987MO3rR7exzMs5MnnDoF94z-te080ZK0vyM_zLW5jHmL3dsaglugU98SDiVcutyN99A0qlzHlf3ed&t=AQIeP5-hd8Z-0TpPN6w" },
-      { name:"IMA_Comparativa platitos - Rabioli - Copia",                created:"2026-06-11", spend:12.30,   purchases:0,   ctr:1.89, cpa:0,     type:"IMG", iframe:null },
-      { name:"IMA_ Paid_Partnership_Juan Llorca",                         created:"2026-03-27", spend:3.38,    purchases:0,   ctr:3.79, cpa:0,     type:"IMG", iframe:null },
-      { name:"CARR_Lanzamiento Gazpachito - Contenido orgánico",          created:"2026-05-05", spend:30.64,   purchases:6,   ctr:1.15, cpa:5.11,  type:"CARR",iframe:null }
-    ]
-  }
+  "2026-06-16": [
+    {id:"52518255264882", name:"VID_Genérico- Promo - Junio 2026 - 25% en packs - Copia",   created:"2026-06-15", spend:1230.73, purchases:236, ctr:0.71, cpa:5.21,  type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJIpez8-DMvYEuJquy8h3iU6tEgDyx_xpvV7ytixAEGEm-c9d1p0FBuNfXr2KBLeKpGkzFPpQQn_uOSWwz_7aEeC2gkeMAISm49kity3NJurNHNE0Y-UyvrnuD0_a5RtzVAoTTwFgHggjx6rAaQC4Wo1ZzYikySZznCH63BWeijn6_LP0a-xnWTeZph69bjMKcm8XDqTBEeQ1Jj3I6TCI91&t=AQINi7yX69s3LsJ_iy8"},
+    {id:"6969966232478",  name:"VID_UGC_PROS_Smilados",                                      created:"2026-04-30", spend:344.87,  purchases:148, ctr:0.77, cpa:2.33,  type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQI4CSMnZUUWnrvNf4xqK0sSKwAkUP2LefvAWD9I-_pzx_11xkvzD5qlImE69LM07kKgNGDjsaZ73pt176HUL1MGVzWZIWvGdetJya9ixZtfnOuqx7xIIORJiOekGmNDkwam4JJH3b50RKpis0MYUIIFaTnGkaiYsDJBYSGBp7nV1WyKEvY8Dvm0oE0huqzUuThQfqtSwu1e9mfFqbpb6E8s&t=AQJ56zRao9734QQN9A8"},
+    {id:"52514276901482", name:"VID_Dudas Tarritos - Copia",                                 created:"2026-06-11", spend:2026.30, purchases:81,  ctr:2.45, cpa:25.02, type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJOXX4zooAo6ZhOktfSbRPdan7tcOJQZgHicuiHdUC-16wubeYTcuiXAJ_eBdPNMYul-DOm27U6ESS8byE5LYqgUl7qMdDMbdhTeZbEEXpgNUxHp8eqfXjy18qSENARz0HEKMp2jgFTeDuFNAPMm31IMgw6263wbVoFGKSaq3wZd0f05iCyts2ZagYd4JWrdSM64SV822-3CYkdL4ME0jNT&t=AQIksBP_1nX_QAP9bHM"},
+    {id:"6958422229678",  name:"VID - Suscripción Hook 1 \"Sabias que puedes tener\"",       created:"2026-04-13", spend:670.02,  purchases:81,  ctr:1.07, cpa:8.27,  type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJX9-p_MqBbbc5ic5NYzsJoOkioZjgqIZy7ww5PDmn1CewqpLTAK_qk1yb0Lqkof0TVf55V5eNInxchTr4kj_cf5zhCbsHNq03dPeHZ1rLwI_egBHapaH3jnnGNo7GnqTLFd9MusoSyVbevz968MlQVjZanZybvRXaCryqhS6OcehMFt05kjA1I148FtNRl11rmh4_rwdONVnN07WSkDafu&t=AQLPRG3-5Y4FHlbUK60"},
+    {id:"52518254859482", name:"VID_Genérico- Promo - Junio 2026 - 25% en packs",           created:"2026-06-15", spend:863.71,  purchases:77,  ctr:0.66, cpa:11.22, type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLoI0PUYOlPU83emzvXn-oAfvergabNYetsinPls7gPErdHLSuuJJD7Xrrk3pPubvvVyuSMr-RL4gNjrqGZOFJC0A-rhylNIGool1ocpvysh2s-WrhtngSoq0_dfRJ_K5b74MwJjbzXcTjh73cDQqgczb2MT-ANUssCUFZ3tIFRCQGWJWeAeom3NPohXUf7nDIDtwx0U3LGT5ktXAU4LRb7&t=AQLSYYzeKYXkPc0IUuI"},
+    {id:"52514223353282", name:"VID_UGC- Gazpazchito - Hook 2",                             created:"2026-06-11", spend:614.98,  purchases:76,  ctr:1.08, cpa:8.09,  type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQK7B6bQJbAMEZkOSqZ_o37nVmsjnJvEp-14AAxKOgRtn6zbWJaEyRmbl46VVPb1Ll4vx2okc36SafZmLnE2K6uA-9ECrAb2KEeifaqqWRsqQcmTeuSHDgJV7by_R5QicWaT1bV_VbSrYnEHuoG5xzCU9kuvWx90TtD9p66rxj4wbhpmYWI5-2ySvLlKRytxffCpKqB2S81LD3qf_eZfPRl5&t=AQLC9RdcIk6cg1Vqd8Q"},
+    {id:"52518255264682", name:"VID_Consumo_Smilados- Promo - Junio 2026 - 25% en packs",  created:"2026-06-15", spend:186.85,  purchases:57,  ctr:0.68, cpa:3.28,  type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJF4x3eIN1TO1ojGkNF_s-xs0uQzLibPZGRqf3vYEU4fDNdcTTPU6CrXIptDlJbq9NOJHn8iDZr4lRlHbChpZ_-RQ6bFXLJS6yiotnY4hAtjFWhau9Kk4MuhhuhR3SHYsZAnpsJqj2d7L1vqSvkFJfEmrfCV_XNSMRCnNNtEgUZvXkxB6bevm_PVyFpLF7U4KmWDnIkMV3VwX6H7ZX4syto&t=AQK9GOXMdqND9qOQKrg"},
+    {id:"52518253256282", name:"VID_Consumo_Smilados- Promo - 25% en packs (v2)",           created:"2026-06-15", spend:75.89,   purchases:10,  ctr:0.69, cpa:7.59,  type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKe7SIhiYmVsQgBZ_LldVdSM20jtcDKmo-py71yUwY6etD_M2SwfkZzw1evPWhn2BFzwkSGghPLk8BWzsQiwqPzUNWcS7Yw5vDXhReKz93AL1fzQKV6ZJFOKpEh1BauuAW6a9h5_JG6YD4jc3Ue-z5VAqjIaAhG5D0bm40gIVkczsoY1YvXDXhVuMID1fNM1px7QSBhCxIi5zsSdfNbim5z&t=AQL_9FxUghfenW_neq0"},
+    {id:"52514199073882", name:"VID_UGC- Gazpazchito - Hook 1 \"Con este calor\"",          created:"2026-06-11", spend:49.87,   purchases:9,   ctr:0.95, cpa:5.54,  type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKUA-UL4_g0BZyriOYMdU0y6wkrkJ0Rb_--cj9an72UkQBdLZMGGK1MKr9x8KZt0N7_z3AbHmBZYYaLIVRS89E_UZvZHjccJmwn1bWoATIf4X2VrPQecJYJUwkFLBwTQ1R5Qvv9YXFHROCrSTIopMPuOxJSPyqhAFCzS_zyn8zODSjkfvovv9WzdPFVySmC4lNvrFAmISkZHQ-jJUc_tWx8&t=AQJOilsNEl6BuNBPwWQ"},
+    {id:"52528248630482", name:"VID_Paid_Partnership_Juan Llorca_Gazpachito",               created:"2026-06-22", spend:71.76,   purchases:2,   ctr:2.28, cpa:35.88, type:"VID", iframe:null},
+    {id:"6958428746078",  name:"VID - Suscripción Hook 2 \"Si tienes un bebé...\"",         created:"2026-04-13", spend:31.86,   purchases:2,   ctr:1.07, cpa:15.93, type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJTfadXZDQQYkUW8bW3OdDiiMOEQ5NZfmc0Qu2RCyie6GxRFQrKl3fxduStq2ticDK13EYu2M3Z0uJSrsnAS4R4nEa_mbXsh4wAWn8dbXtllmoiVjBQklW7PbPDJfmwdUCF4yycc_EgjIlcGfZ8mK1cOxarcqp1H5RIln3ce4O3idihG53PGinruVIhVzcb9_RezT_1lD3DO839aq1K6T8m&t=AQJjKwbONGHRJ69d7iY"},
+    {id:"6973419646878",  name:"VID_Lanzamiento Gazpachito",                                created:"2026-05-05", spend:0,       purchases:1,   ctr:0,    cpa:0,     type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKipGVlWmHLkHhaAeS_sT58GrSYNIqPAKnv_5IcPNaojq__1AbElK9p-XoKrovtqfokBzg85RQjGgQbxXTdM41GSQlEr0Ll-DM0cLserPt3RCAnBaph2nZbI4Tzkzp_PsLTrSLKVqhdNH6MoRP7GAaMmuw8WvYiqG0hzoJ5pM2dNOO4gIffDGs5ymFBQjSDgTf-tkNKPjzrFIgCfJVs0mX9&t=AQIIyg2qqI52IHCAIaM"},
+    {id:"52523846493682", name:"IMG 2 - 25% Descuento junio 2026",                          created:"2026-06-19", spend:938.92,  purchases:142, ctr:0.92, cpa:6.61,  type:"IMG", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQK_zFHUnr2kVA0tZSVZVfOt-TTfatIMAHvad-0AGEuYZ13RvreRcKEG2WAXo0m51K783QXi8k2YPsjHk4Ta6QIkLLDbNcF3F6Bv-e66bMfPp8De9AOHPwYZ6wptqpuUC5CGCqxmyBNol-2pwEOC4BPLiFr8OxgnQPRL7Q2XlckXbHLXue-3RA5ySXIrAC2IEuRPlABoNaAkgTtOrYm8C59G&t=AQJeyHYDRmRxcD0hG3w"},
+    {id:"52523669186482", name:"IMG - 25% Descuento junio 2026",                            created:"2026-06-19", spend:60.94,   purchases:21,  ctr:1.18, cpa:2.90,  type:"IMG", iframe:null},
+    {id:"52523820613482", name:"IMG 1 - 25% Descuento junio 2026",                          created:"2026-06-19", spend:45.90,   purchases:5,   ctr:1.18, cpa:9.18,  type:"IMG", iframe:null},
+    {id:"52514276900882", name:"IMA_Comparativa platitos - macarrones - Copia",             created:"2026-06-11", spend:4.16,    purchases:1,   ctr:1.80, cpa:4.16,  type:"IMG", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJRYS7V1lCiK-BbzusbqcymMQ1-acHujrMGCAz5vAz3tcrGzuNbO4xTFAIJIfZkEpfKQsvchOpbZhcSPNl513pQqIkxs04BblxElyNOY9gV3khUkkdG1o_zU10GZ9_RQCogUubKJ8987MO3rR7exzMs5MnnDoF94z-te080ZK0vyM_zLW5jHmL3dsaglugU98SDiVcutyN99A0qlzHlf3ed&t=AQIeP5-hd8Z-0TpPN6w"},
+    {id:"52514276900282", name:"IMA_Comparativa platitos - Rabioli - Copia",                created:"2026-06-11", spend:12.30,   purchases:0,   ctr:1.89, cpa:0,     type:"IMG", iframe:null},
+    {id:"6948492896478",  name:"IMA_ Paid_Partnership_Juan Llorca",                         created:"2026-03-27", spend:3.38,    purchases:0,   ctr:3.79, cpa:0,     type:"IMG", iframe:null}
+  ],
+  "2026-06-09": [
+    {id:"6969966232478",  name:"VID_UGC_PROS_Smilados",                                     created:"2026-04-30", spend:343.30,  purchases:271, ctr:0.76, cpa:1.27,  type:"VID", iframe:null},
+    {id:"6958422229678",  name:"VID - Suscripción Hook 1 \"Sabias que puedes tener\"",      created:"2026-04-13", spend:657.71,  purchases:111, ctr:1.09, cpa:5.93,  type:"VID", iframe:null},
+    {id:"52514223353282", name:"VID_UGC- Gazpazchito - Hook 2",                             created:"2026-06-11", spend:366.28,  purchases:76,  ctr:0.82, cpa:4.82,  type:"VID", iframe:null},
+    {id:"52514276901482", name:"VID_Dudas Tarritos - Copia",                                created:"2026-06-11", spend:1778.75, purchases:67,  ctr:2.59, cpa:26.55, type:"VID", iframe:null},
+    {id:"52518255264882", name:"VID_Genérico- Promo - Junio 2026 - 25% en packs - Copia",  created:"2026-06-15", spend:146.95,  purchases:54,  ctr:0.90, cpa:2.72,  type:"VID", iframe:null},
+    {id:"6973419646878",  name:"VID_Lanzamiento Gazpachito",                                created:"2026-05-05", spend:222.60,  purchases:33,  ctr:0.73, cpa:6.75,  type:"VID", iframe:null},
+    {id:"52518254859482", name:"VID_Genérico- Promo - Junio 2026 - 25% en packs",          created:"2026-06-15", spend:193.71,  purchases:32,  ctr:0.76, cpa:6.05,  type:"VID", iframe:null},
+    {id:"52518255264682", name:"VID_Consumo_Smilados- Promo - Junio 2026 - 25% en packs",  created:"2026-06-15", spend:121.94,  purchases:27,  ctr:0.74, cpa:4.52,  type:"VID", iframe:null},
+    {id:"52514199073882", name:"VID_UGC- Gazpazchito - Hook 1 \"Con este calor\"",          created:"2026-06-11", spend:69.06,   purchases:10,  ctr:0.53, cpa:6.91,  type:"VID", iframe:null},
+    {id:"52518253256282", name:"VID_Consumo_Smilados- Promo - 25% en packs (v2)",           created:"2026-06-15", spend:78.98,   purchases:9,   ctr:0.75, cpa:8.78,  type:"VID", iframe:null},
+    {id:"6958428746078",  name:"VID - Suscripción Hook 2 \"Si tienes un bebé...\"",         created:"2026-04-13", spend:25.42,   purchases:6,   ctr:1.18, cpa:4.24,  type:"VID", iframe:null},
+    {id:"6996619093078",  name:"IMA_ Regalo cuchara - may 2026 - consumo Gazpachito",       created:"2026-05-28", spend:0,       purchases:12,  ctr:0,    cpa:0,     type:"IMG", iframe:null},
+    {id:"52503632881282", name:"IMA_ Regalo cuchara - bodegón (jun)",                       created:"2026-06-02", spend:0,       purchases:4,   ctr:0,    cpa:0,     type:"IMG", iframe:null},
+    {id:"6996644941678",  name:"IMA_ Regalo cuchara - bodegón (may)",                       created:"2026-05-28", spend:0,       purchases:3,   ctr:0,    cpa:0,     type:"IMG", iframe:null},
+    {id:"6996658783478",  name:"IMA_ Regalo cuchara - Tarrito Merluza",                     created:"2026-05-28", spend:0,       purchases:2,   ctr:0,    cpa:0,     type:"IMG", iframe:null},
+    {id:"52514276900882", name:"IMA_Comparativa platitos - macarrones - Copia",             created:"2026-06-11", spend:8.47,    purchases:0,   ctr:1.53, cpa:0,     type:"IMG", iframe:null},
+    {id:"52514276900282", name:"IMA_Comparativa platitos - Rabioli - Copia",                created:"2026-06-11", spend:125.47,  purchases:0,   ctr:1.68, cpa:0,     type:"IMG", iframe:null},
+    {id:"6973415546278",  name:"IMA_Lanzamiento Gazpachito - el primer gazpacho",           created:"2026-05-05", spend:0.49,    purchases:0,   ctr:0.56, cpa:0,     type:"IMG", iframe:null},
+    {id:"6973407947278",  name:"IMA_Lanzamiento Gazpachito - nuevo tarrito",                created:"2026-05-05", spend:0.09,    purchases:0,   ctr:2.86, cpa:0,     type:"IMG", iframe:null},
+    {id:"6948492896478",  name:"IMA_ Paid_Partnership_Juan Llorca",                         created:"2026-03-27", spend:1.95,    purchases:0,   ctr:2.96, cpa:0,     type:"IMG", iframe:null}
+  ],
+  "2026-06-02": [
+    {id:"6969966232478",  name:"VID_UGC_PROS_Smilados",                                     created:"2026-04-30", spend:364.21,  purchases:82,  ctr:1.29, cpa:4.44,  type:"VID", iframe:null},
+    {id:"6958422229678",  name:"VID - Suscripción Hook 1 \"Sabias que puedes tener\"",      created:"2026-04-13", spend:692.81,  purchases:81,  ctr:1.22, cpa:8.55,  type:"VID", iframe:null},
+    {id:"6973419646878",  name:"VID_Lanzamiento Gazpachito",                                created:"2026-05-05", spend:653.71,  purchases:62,  ctr:0.83, cpa:10.54, type:"VID", iframe:null},
+    {id:"6996661665678",  name:"VID_ Regalo cuchara -",                                     created:"2026-05-28", spend:22.63,   purchases:4,   ctr:0.40, cpa:5.66,  type:"VID", iframe:null},
+    {id:"52503632874282", name:"VID_ Regalo cuchara (jun)",                                 created:"2026-06-02", spend:20.32,   purchases:1,   ctr:0.87, cpa:20.32, type:"VID", iframe:null},
+    {id:"6958428746078",  name:"VID - Suscripción Hook 2 \"Si tienes un bebé...\"",         created:"2026-04-13", spend:27.54,   purchases:1,   ctr:1.53, cpa:27.54, type:"VID", iframe:null},
+    {id:"6996619093078",  name:"IMA_ Regalo cuchara - may 2026 - consumo Gazpachito",       created:"2026-05-28", spend:1556.46, purchases:169, ctr:0.74, cpa:9.21,  type:"IMG", iframe:null},
+    {id:"52503632881282", name:"IMA_ Regalo cuchara - bodegón (jun)",                       created:"2026-06-02", spend:1460.95, purchases:147, ctr:0.68, cpa:9.94,  type:"IMG", iframe:null},
+    {id:"6996644941678",  name:"IMA_ Regalo cuchara - bodegón (may)",                       created:"2026-05-28", spend:193.48,  purchases:22,  ctr:0.64, cpa:8.79,  type:"IMG", iframe:null},
+    {id:"52503632881082", name:"IMA_ Regalo cuchara - Tarrito Merluza (jun)",               created:"2026-06-02", spend:164.17,  purchases:12,  ctr:1.34, cpa:13.68, type:"IMG", iframe:null},
+    {id:"6996655181878",  name:"IMA_ Regalo cuchara - platitos",                            created:"2026-05-28", spend:71.22,   purchases:8,   ctr:1.14, cpa:8.90,  type:"IMG", iframe:null},
+    {id:"52503632881682", name:"IMA_ Regalo cuchara - may 2026 consumo (jun)",              created:"2026-06-02", spend:119.64,  purchases:7,   ctr:0.84, cpa:17.09, type:"IMG", iframe:null},
+    {id:"52503632881482", name:"IMA_ Regalo cuchara - platitos (jun)",                      created:"2026-06-02", spend:32.35,   purchases:5,   ctr:1.21, cpa:6.47,  type:"IMG", iframe:null},
+    {id:"6996658783478",  name:"IMA_ Regalo cuchara - Tarrito Merluza (may)",               created:"2026-05-28", spend:105.18,  purchases:3,   ctr:1.20, cpa:35.06, type:"IMG", iframe:null},
+    {id:"6973415546278",  name:"IMA_Lanzamiento Gazpachito - el primer gazpacho",           created:"2026-05-05", spend:0.08,    purchases:0,   ctr:0,    cpa:0,     type:"IMG", iframe:null},
+    {id:"6973407947278",  name:"IMA_Lanzamiento Gazpachito - nuevo tarrito",                created:"2026-05-05", spend:0.06,    purchases:0,   ctr:0,    cpa:0,     type:"IMG", iframe:null}
+  ],
+  "2026-05-26": [
+    {id:"6969966232478",  name:"VID_UGC_PROS_Smilados",                                     created:"2026-04-30", spend:341.56,  purchases:114, ctr:1.00, cpa:3.00,  type:"VID", iframe:null},
+    {id:"6973419646878",  name:"VID_Lanzamiento Gazpachito",                                created:"2026-05-05", spend:630.59,  purchases:69,  ctr:0.77, cpa:9.14,  type:"VID", iframe:null},
+    {id:"6958422229678",  name:"VID - Suscripción Hook 1 \"Sabias que puedes tener\"",      created:"2026-04-13", spend:670.07,  purchases:66,  ctr:1.13, cpa:10.15, type:"VID", iframe:null},
+    {id:"6958428746078",  name:"VID - Suscripción Hook 2 \"Si tienes un bebé...\"",         created:"2026-04-13", spend:21.46,   purchases:6,   ctr:1.30, cpa:3.58,  type:"VID", iframe:null},
+    {id:"6996661665678",  name:"VID_ Regalo cuchara -",                                     created:"2026-05-28", spend:16.61,   purchases:3,   ctr:0.80, cpa:5.54,  type:"VID", iframe:null},
+    {id:"6996619093078",  name:"IMA_ Regalo cuchara - may 2026 - consumo Gazpachito",       created:"2026-05-28", spend:856.36,  purchases:107, ctr:1.07, cpa:8.00,  type:"IMG", iframe:null},
+    {id:"6996644941678",  name:"IMA_ Regalo cuchara - bodegón (may)",                       created:"2026-05-28", spend:271.66,  purchases:43,  ctr:0.94, cpa:6.32,  type:"IMG", iframe:null},
+    {id:"6969943500478",  name:"PROS/RET_Prensa_Concódigo/Alberto",                         created:"2026-04-30", spend:179.42,  purchases:27,  ctr:0.87, cpa:6.65,  type:"IMG", iframe:null},
+    {id:"6996658783478",  name:"IMA_ Regalo cuchara - Tarrito Merluza",                     created:"2026-05-28", spend:101.12,  purchases:8,   ctr:1.67, cpa:12.64, type:"IMG", iframe:null},
+    {id:"6996655181878",  name:"IMA_ Regalo cuchara - platitos",                            created:"2026-05-28", spend:34.17,   purchases:5,   ctr:1.27, cpa:6.83,  type:"IMG", iframe:null},
+    {id:"6973415546278",  name:"IMA_Lanzamiento Gazpachito - el primer gazpacho",           created:"2026-05-05", spend:0.96,    purchases:0,   ctr:0.28, cpa:0,     type:"IMG", iframe:null},
+    {id:"6973407947278",  name:"IMA_Lanzamiento Gazpachito - nuevo tarrito",                created:"2026-05-05", spend:0.40,    purchases:0,   ctr:0,    cpa:0,     type:"IMG", iframe:null}
+  ]
 };
 
 const KEYS = Object.keys(WEEKS).sort().reverse();
-let idx = 0;
+let idx = 0, currentAds = [];
 
-function pd(s) { const [y,m,d]=s.split('-').map(Number); return new Date(y,m-1,d); }
-function fmtWeek(k) {
-  const mon=pd(k), sun=new Date(mon); sun.setDate(mon.getDate()+6);
+function pd(s){const[y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d);}
+function fmtWeek(k){
+  const mon=pd(k),sun=new Date(mon);sun.setDate(mon.getDate()+6);
   const f=d=>d.toLocaleDateString('es-ES',{day:'2-digit',month:'short'});
   return `${f(mon)} – ${f(sun)} · ${mon.getFullYear()}`;
 }
-function days(s) { return Math.round((new Date(2026,5,24)-pd(s))/86400000); }
+function days(s){return Math.round((new Date(2026,5,24)-pd(s))/86400000);}
 
-function noPreview() {
-  return `<div class="no-prev">
-    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7A9AAD" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-    <span>Sin preview</span>
-  </div>`;
+function wowBadge(curr, prev, lowerIsBetter=false) {
+  if(prev==null||prev===0) return '';
+  const pct = ((curr-prev)/prev)*100;
+  const abs = Math.abs(pct).toFixed(1);
+  if(Math.abs(pct)<1) return `<span class="wow flat">→ ${abs}%</span>`;
+  const better = lowerIsBetter ? pct<0 : pct>0;
+  const cls = better ? 'up' : 'down';
+  const arrow = pct>0 ? '↑' : '↓';
+  return `<span class="wow ${cls}">${arrow} ${abs}%</span>`;
 }
 
-// cls = 'top-v' | 'top-i' | 'bot-v' | 'bot-i'
-function card(ad, cls, rank, adIdx) {
-  const isVid = ad.type === 'VID';
-  const d = days(ad.created);
-  const created = pd(ad.created).toLocaleDateString('es-ES',{day:'2-digit',month:'short',year:'numeric'});
-  const spend = `€${ad.spend.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})}`;
-  const cpa   = ad.cpa>0 ? `€${ad.cpa.toFixed(2)}` : '—';
-  const ctr   = `${ad.ctr.toFixed(2)}%`;
-  const avgCpa = 7.59;
-  const cc = ad.cpa>0&&ad.cpa<=avgCpa*0.7?'g':ad.cpa>avgCpa*1.4?'r':'';
-  const wrapCls = isVid ? 'vid' : 'img';
-  const media = ad.iframe
-    ? `<iframe src="${ad.iframe}" scrolling="no" allow="autoplay" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>`
-    : noPreview();
+function summaryStats(ads){
+  const ts=ads.reduce((s,a)=>s+a.spend,0);
+  const tp=ads.reduce((s,a)=>s+a.purchases,0);
+  const cpa=tp>0?ts/tp:0;
+  const active=ads.filter(a=>a.spend>0).length;
+  return{spend:ts,purchases:tp,cpa,active};
+}
 
-  return `
-<div class="card ${cls}" onclick="openModal(${adIdx})">
-  <div class="preview-wrap ${wrapCls}" data-type="${wrapCls}">
-    ${media}
-    <span class="rank ${cls}">${rank}</span>
-    <span class="type-tag">${ad.type}</span>
-  </div>
+function noPreviewHTML(){
+  return`<div class="no-prev"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7A9AAD" stroke-width="1.5" opacity=".4"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Sin preview</span></div>`;
+}
+
+function amLink(id, stopPropagation=false){
+  const url=`${AM_BASE}${id}`;
+  const stop=stopPropagation?'onclick="event.stopPropagation()"':'';
+  return`<a href="${url}" target="_blank" rel="noopener" class="am-link" ${stop}>
+    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    Ver en Ads Manager
+  </a>`;
+}
+
+function card(ad,cls,rank,gIdx){
+  const isVid=ad.type==='VID';
+  const d=days(ad.created);
+  const cr=pd(ad.created).toLocaleDateString('es-ES',{day:'2-digit',month:'short',year:'numeric'});
+  const spend=`€${ad.spend.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})}`;
+  const cpa=ad.cpa>0?`€${ad.cpa.toFixed(2)}`:'—';
+  const ctr=`${ad.ctr.toFixed(2)}%`;
+  const avgCpa=8;
+  const cc=ad.cpa>0&&ad.cpa<=avgCpa*0.7?'g':ad.cpa>avgCpa*1.4?'r':'';
+  const media=ad.iframe
+    ?`<iframe src="${ad.iframe}" scrolling="no" allow="autoplay" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>`
+    :noPreviewHTML();
+  return`<div class="card ${cls}" onclick="openModal(${gIdx})">
+  <div class="preview-wrap ${isVid?'vid':'img'}">${media}<span class="rank ${cls}">${rank}</span><span class="type-tag">${ad.type}</span></div>
   <div class="cbody">
     <p class="ad-name" title="${ad.name}">${ad.name}</p>
-    <div class="ad-meta">
-      <span class="meta-date">${created}</span>
-      <span class="days-pill">${d}d</span>
-    </div>
+    <div class="ad-meta"><span class="meta-date">${cr}</span><span class="days-pill">${d}d</span></div>
     <div class="metrics">
       <div class="m"><div class="m-lbl">Spend</div><div class="m-val">${spend}</div></div>
       <div class="m"><div class="m-lbl">Purchases</div><div class="m-val">${ad.purchases}</div></div>
       <div class="m"><div class="m-lbl">CPA</div><div class="m-val ${cc}">${cpa}</div></div>
       <div class="m"><div class="m-lbl">CTR</div><div class="m-val">${ctr}</div></div>
     </div>
+    ${amLink(ad.id, true)}
   </div>
 </div>`;
 }
 
-// store current week ads for modal lookup
-let currentAds = [];
-
-function section(ads, cls, emoji, label, sub) {
+function section(ads,allAds,cls,emoji,label,sub){
   if(!ads.length) return '';
-  return `
-    <div class="sec-hdr">
-      <span class="badge ${cls}">${emoji} ${label}</span>
-      <span class="sec-sub">${sub}</span>
-    </div>
-    <div class="grid5">${ads.map((a,i) => card(a, cls, i+1, currentAds.indexOf(a))).join('')}</div>`;
+  return`<div class="sec-hdr"><span class="badge ${cls}">${emoji} ${label}</span><span class="sec-sub">${sub}</span></div>
+<div class="grid5">${ads.map((a,i)=>card(a,cls,i+1,allAds.indexOf(a))).join('')}</div>`;
 }
 
-function render() {
-  const key = KEYS[idx];
-  document.getElementById('wlabel').textContent = fmtWeek(key);
-  document.getElementById('bprev').disabled = idx >= KEYS.length-1;
-  document.getElementById('bnext').disabled = idx <= 0;
+function render(){
+  const key=KEYS[idx];
+  document.getElementById('wlabel').textContent=fmtWeek(key);
+  document.getElementById('bprev').disabled=idx>=KEYS.length-1;
+  document.getElementById('bnext').disabled=idx<=0;
 
-  const w = WEEKS[key];
-  if(!w) { document.getElementById('main').innerHTML='<p style="padding:3rem;text-align:center">Sin datos.</p>'; return; }
+  const ads=WEEKS[key]||[];
+  currentAds=ads;
+  const prevKey=KEYS[idx+1];
+  const prevAds=prevKey?WEEKS[prevKey]:null;
 
-  currentAds = w.ads;
+  const curr=summaryStats(ads);
+  const prev=prevAds?summaryStats(prevAds):null;
 
-  const vids = w.ads.filter(a=>a.type==='VID').sort((a,b)=>b.purchases-a.purchases);
-  const imgs = w.ads.filter(a=>a.type==='IMG'||a.type==='IMA').sort((a,b)=>b.purchases-a.purchases);
+  const fmt=(v,dec=2)=>`€${v.toLocaleString('es-ES',{minimumFractionDigits:dec,maximumFractionDigits:dec})}`;
 
-  const topV  = vids.slice(0,5);
-  const botV  = vids.slice(-5).reverse();
-  const topI  = imgs.slice(0,5);
-  const botI  = imgs.length>=2 ? imgs.slice(-Math.min(5,imgs.length)).reverse() : [];
-
-  const ts = w.ads.reduce((s,a)=>s+a.spend,0);
-  const tp = w.ads.reduce((s,a)=>s+a.purchases,0);
-  const avgCpa = tp>0?(ts/tp).toFixed(2):'—';
-  const active = w.ads.filter(a=>a.spend>0).length;
-
-  document.getElementById('main').innerHTML = `
+  document.getElementById('main').innerHTML=`
     <div class="summary">
-      <div class="scard"><div class="lbl">Total spend</div><div class="val">€${ts.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})}</div></div>
-      <div class="scard"><div class="lbl">Total purchases</div><div class="val">${tp}</div></div>
-      <div class="scard"><div class="lbl">CPA medio</div><div class="val">€${avgCpa}</div></div>
-      <div class="scard"><div class="lbl">Creatividades activas</div><div class="val">${active}</div></div>
+      <div class="scard">
+        <div class="lbl">Total spend</div>
+        <div class="val">${fmt(curr.spend)}</div>
+        ${prev?wowBadge(curr.spend,prev.spend):''}
+      </div>
+      <div class="scard">
+        <div class="lbl">Total purchases</div>
+        <div class="val">${curr.purchases}</div>
+        ${prev?wowBadge(curr.purchases,prev.purchases):''}
+      </div>
+      <div class="scard">
+        <div class="lbl">CPA medio</div>
+        <div class="val">${curr.cpa>0?fmt(curr.cpa):'—'}</div>
+        ${prev&&prev.cpa>0?wowBadge(curr.cpa,prev.cpa,true):''}
+      </div>
+      <div class="scard">
+        <div class="lbl">Creatividades activas</div>
+        <div class="val">${curr.active}</div>
+        ${prev?wowBadge(curr.active,prev.active):''}
+      </div>
     </div>
-
-    ${section(topV,'top-v','🏆','Top 5 Video','Mayor purchases · formato vertical')}
-    <div class="divider"></div>
-    ${section(topI,'top-i','🏆','Top 5 Imagen','Mayor purchases · formato cuadrado')}
-    <div class="divider"></div>
-    ${section(botV,'bot-v','⚠️','Bottom 5 Video','Menor purchases')}
-    <div class="divider"></div>
-    ${section(botI,'bot-i','⚠️','Bottom 5 Imagen','Menor purchases')}
+    ${(()=>{
+      const vids=ads.filter(a=>a.type==='VID').sort((a,b)=>b.purchases-a.purchases);
+      const imgs=ads.filter(a=>a.type==='IMG'||a.type==='IMA').sort((a,b)=>b.purchases-a.purchases);
+      const topV=vids.slice(0,5), botV=vids.length>5?[...vids].slice(-5).reverse():[];
+      const topI=imgs.slice(0,5), botI=imgs.length>5?[...imgs].slice(-5).reverse():[];
+      return[
+        section(topV,ads,'top-v','🏆','Top 5 Video','Mayor purchases'),
+        '<div class="divider"></div>',
+        section(topI,ads,'top-i','🏆','Top 5 Imagen','Mayor purchases'),
+        botV.length?'<div class="divider"></div>'+section(botV,ads,'bot-v','⚠️','Bottom 5 Video','Menor purchases'):'',
+        botI.length?'<div class="divider"></div>'+section(botI,ads,'bot-i','⚠️','Bottom 5 Imagen','Menor purchases'):''
+      ].join('');
+    })()}
   `;
-
-  scaleIframes();
+  requestAnimationFrame(()=>requestAnimationFrame(scaleIframes));
 }
 
-function scaleIframes() {
-  document.querySelectorAll('.preview-wrap').forEach(w => {
-    const W = w.offsetWidth; if(!W) return;
-    // iframe native: 320×525. For vid (9:16 container), height = W*16/9
-    // scale to fill width
-    const sc = W / 320;
-    const fr = w.querySelector('iframe');
-    if(fr) fr.style.transform = `translate(-50%,-50%) scale(${sc})`;
+function scaleIframes(){
+  document.querySelectorAll('.preview-wrap').forEach(w=>{
+    const W=w.offsetWidth;if(!W)return;
+    const fr=w.querySelector('iframe');
+    if(fr)fr.style.transform=`translate(-50%,-50%) scale(${W/320})`;
   });
 }
 
-// ── MODAL ──
-function openModal(adIdx) {
-  const ad = currentAds[adIdx];
-  if(!ad) return;
-  const isVid = ad.type === 'VID';
-  const d = days(ad.created);
-  const created = pd(ad.created).toLocaleDateString('es-ES',{day:'2-digit',month:'short',year:'numeric'});
-  const spend = `€${ad.spend.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})}`;
-  const cpa   = ad.cpa>0 ? `€${ad.cpa.toFixed(2)}` : '—';
-  const ctr   = `${ad.ctr.toFixed(2)}%`;
-  const avgCpa = 7.59;
-  const cc = ad.cpa>0&&ad.cpa<=avgCpa*0.7?'g':ad.cpa>avgCpa*1.4?'r':'';
-
-  const mediaCls = isVid ? 'vid' : 'img';
-  const mediaEl = document.getElementById('modal-media');
-  mediaEl.className = `modal-media ${mediaCls}`;
-  mediaEl.innerHTML = ad.iframe
-    ? `<iframe src="${ad.iframe}" scrolling="yes" allow="autoplay" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>`
-    : `<div class="modal-no-prev">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7A9AAD" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        <span>Sin preview disponible</span>
-       </div>`;
-
-  document.getElementById('modal-info').innerHTML = `
-    <div>
-      <span class="modal-badge" style="background:${isVid?'#29ABE2':'#8CC63F'};color:#fff">${ad.type} · ${d}d activo</span>
-    </div>
+function openModal(i){
+  const ad=currentAds[i];if(!ad)return;
+  const isVid=ad.type==='VID';
+  const d=days(ad.created);
+  const cr=pd(ad.created).toLocaleDateString('es-ES',{day:'2-digit',month:'short',year:'numeric'});
+  const spend=`€${ad.spend.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})}`;
+  const cpa=ad.cpa>0?`€${ad.cpa.toFixed(2)}`:'—';
+  const ctr=`${ad.ctr.toFixed(2)}%`;
+  const avgCpa=8;
+  const cc=ad.cpa>0&&ad.cpa<=avgCpa*0.7?'g':ad.cpa>avgCpa*1.4?'r':'';
+  const mm=document.getElementById('modal-media');
+  mm.className=`modal-media ${isVid?'vid':'img'}`;
+  mm.innerHTML=ad.iframe
+    ?`<iframe src="${ad.iframe}" scrolling="yes" allow="autoplay" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>`
+    :`<div class="modal-no-prev"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7A9AAD" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Sin preview disponible</span></div>`;
+  document.getElementById('modal-info').innerHTML=`
+    <div><span class="modal-badge" style="background:${isVid?'#29ABE2':'#8CC63F'};color:#fff">${ad.type} · ${d}d activo</span></div>
     <p class="modal-title">${ad.name}</p>
-    <p class="modal-date">📅 Creado: ${created}</p>
+    <p class="modal-date">📅 Creado: ${cr}</p>
     <div class="modal-metrics">
       <div class="modal-m"><div class="lbl">Ad Spend</div><div class="val">${spend}</div></div>
       <div class="modal-m"><div class="lbl">Purchases</div><div class="val">${ad.purchases}</div></div>
       <div class="modal-m"><div class="lbl">CPA</div><div class="val ${cc}">${cpa}</div></div>
       <div class="modal-m"><div class="lbl">CTR</div><div class="val">${ctr}</div></div>
-    </div>`;
-
+    </div>
+    <a href="${AM_BASE}${ad.id}" target="_blank" rel="noopener" class="modal-am">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      Ver en Ads Manager
+    </a>`;
   document.getElementById('modal-overlay').classList.add('open');
 }
 
-function closeModal() {
+function closeModal(){
   document.getElementById('modal-overlay').classList.remove('open');
-  // stop iframe on close to avoid audio continuing
-  const fr = document.querySelector('#modal-media iframe');
-  if(fr) { const s=fr.src; fr.src=''; fr.src=s; }
+  const fr=document.querySelector('#modal-media iframe');
+  if(fr){const s=fr.src;fr.src='';fr.src=s;}
 }
 
-document.getElementById('modal-close').addEventListener('click', closeModal);
-document.getElementById('modal-overlay').addEventListener('click', e => { if(e.target===e.currentTarget) closeModal(); });
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+document.getElementById('modal-close').addEventListener('click',closeModal);
+document.getElementById('modal-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 document.getElementById('bprev').addEventListener('click',()=>{if(idx<KEYS.length-1){idx++;render();}});
 document.getElementById('bnext').addEventListener('click',()=>{if(idx>0){idx--;render();}});
-window.addEventListener('resize', scaleIframes);
+window.addEventListener('resize',scaleIframes);
 render();
 </script>
 </body>
