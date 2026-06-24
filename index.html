@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,322 +12,213 @@
   --blue:      #29ABE2;
   --blue-dark: #0D7BB5;
   --blue-pale: #E8F6FD;
-  --blue-mid:  #B3DFF5;
   --green:     #8CC63F;
   --green-dark:#5A8A1A;
   --green-pale:#EEF7E0;
   --red:       #E8413B;
   --red-dark:  #A8201A;
   --red-pale:  #FDECEA;
-  --yellow:    #FFC20E;
-  --orange:    #F7941D;
   --gray-bg:   #F4F8FB;
   --gray-100:  #E8EFF4;
-  --gray-200:  #C8D5DF;
   --gray-500:  #7A9AAD;
   --gray-700:  #3A5566;
   --gray-900:  #1A2E38;
-  --font: 'Nunito', 'Futura', 'Century Gothic', sans-serif;
-  --radius-bubble: 20px 20px 20px 4px;
+  --font: 'Nunito', 'Century Gothic', sans-serif;
 }
+body { font-family: var(--font); background: var(--gray-bg); color: var(--gray-900); padding-bottom: 3rem; }
 
-body {
-  font-family: var(--font);
-  background: var(--gray-bg);
-  color: var(--gray-900);
-  padding-bottom: 3rem;
-}
-
-/* ── HEADER ── */
+/* HEADER */
 .hdr {
-  background: var(--blue);
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  position: sticky;
-  top: 0;
-  z-index: 20;
+  background: var(--blue); padding: 0 2rem; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
 }
-
-/* Smileat logo bubble */
 .logo {
-  display: inline-flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 14px 14px 14px 3px;
+  display: inline-flex; align-items: center;
+  background: #fff; border-radius: 14px 14px 14px 3px;
   padding: 5px 14px 5px 12px;
-  gap: 0;
 }
-.logo span {
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--blue);
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-}
+.logo span { font-size: 18px; font-weight: 800; color: var(--blue); letter-spacing: -0.02em; text-transform: uppercase; }
 .logo-sub {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--blue-dark);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.8;
-  margin-left: 8px;
-  border-left: 1.5px solid var(--blue-mid);
-  padding-left: 8px;
+  font-size: 11px; font-weight: 700; color: var(--blue-dark);
+  letter-spacing: .1em; text-transform: uppercase;
+  margin-left: 8px; border-left: 1.5px solid #B3DFF5; padding-left: 8px;
 }
-
-/* week nav */
-.wnav {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  background: rgba(255,255,255,0.15);
-  border-radius: 10px;
-  padding: 4px 6px;
-}
+.wnav { display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,.15); border-radius: 10px; padding: 4px 6px; }
 .wnav button {
-  background: rgba(255,255,255,0.2);
-  border: none;
-  border-radius: 7px;
-  width: 28px; height: 28px;
-  cursor: pointer;
-  font-size: 14px;
-  color: #fff;
-  font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
-  transition: background 0.15s;
+  background: rgba(255,255,255,.2); border: none; border-radius: 7px;
+  width: 28px; height: 28px; cursor: pointer; font-size: 14px; font-weight: 800;
+  color: #fff; display: flex; align-items: center; justify-content: center;
 }
-.wnav button:hover:not(:disabled) { background: rgba(255,255,255,0.35); }
-.wnav button:disabled { opacity: 0.3; cursor: default; }
-.wnav .wlabel {
-  font-size: 13px;
-  font-weight: 700;
-  color: #fff;
-  min-width: 155px;
-  text-align: center;
-  padding: 0 4px;
-}
+.wnav button:hover:not(:disabled) { background: rgba(255,255,255,.35); }
+.wnav button:disabled { opacity: .3; cursor: default; }
+.wnav .wlabel { font-size: 13px; font-weight: 700; color: #fff; min-width: 155px; text-align: center; padding: 0 4px; }
 
-/* ── MAIN ── */
-.main { max-width: 1120px; margin: 0 auto; padding: 1.75rem 1.5rem; }
+/* MAIN */
+.main { max-width: 1280px; margin: 0 auto; padding: 1.75rem 1.5rem; }
 
-/* ── SUMMARY BAR ── */
-.summary {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-bottom: 2rem;
-}
-.scard {
-  background: #fff;
-  border-radius: 16px;
-  padding: 14px 16px;
-  border-bottom: 3px solid var(--blue);
-  position: relative;
-  overflow: hidden;
-}
-.scard::before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 50px; height: 50px;
-  background: var(--blue-pale);
-  border-radius: 0 16px 0 50px;
-}
-.scard .lbl {
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--blue-dark);
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  margin-bottom: 5px;
-}
-.scard .val {
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--gray-900);
-  letter-spacing: -0.02em;
-}
+/* SUMMARY */
+.summary { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 2rem; }
+.scard { background: #fff; border-radius: 14px; padding: 12px 16px; border-bottom: 3px solid var(--blue); }
+.scard .lbl { font-size: 10px; font-weight: 700; color: var(--blue-dark); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+.scard .val { font-size: 20px; font-weight: 800; letter-spacing: -.02em; }
 
-/* ── SECTION HEADER ── */
-.sec-hdr {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 1.25rem;
-}
-
-/* Bubble badge — Smileat style */
+/* SECTION */
+.sec-hdr { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
 .badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .05em;
-  text-transform: uppercase;
-  padding: 6px 16px 6px 12px;
-  border-radius: 12px 12px 12px 3px;
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase;
+  padding: 5px 14px 5px 10px; border-radius: 10px 10px 10px 3px;
 }
-.badge.top    { background: var(--green); color: #fff; }
-.badge.bottom { background: var(--red);   color: #fff; }
+.badge.top-v  { background: var(--green); color: #fff; }
+.badge.top-i  { background: var(--blue);  color: #fff; }
+.badge.bot-v  { background: var(--red);   color: #fff; }
+.badge.bot-i  { background: #F7941D;      color: #fff; }
 .sec-sub { font-size: 12px; font-weight: 600; color: var(--gray-500); }
+.divider { height: 2px; background: linear-gradient(to right, #B3DFF5, transparent); margin: 1.75rem 0; border-radius: 2px; }
 
-.divider {
-  height: 2px;
-  background: linear-gradient(to right, var(--blue-mid), transparent);
-  margin: 2rem 0;
-  border-radius: 2px;
-}
+/* GRID — 5 cols */
+.grid5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: .5rem; }
 
-/* ── CARD GRID — always 3 cols ── */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-/* ── CARD ── */
+/* CARD */
 .card {
-  background: #fff;
-  border-radius: 18px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(41,171,226,0.08);
+  background: #fff; border-radius: 14px; overflow: hidden;
+  display: flex; flex-direction: column; cursor: pointer;
+  transition: transform .18s, box-shadow .18s;
+  box-shadow: 0 2px 6px rgba(41,171,226,.08);
 }
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(41,171,226,0.15);
-}
-.card.top    { border-top: 4px solid var(--green); }
-.card.bottom { border-top: 4px solid var(--red); }
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(41,171,226,.18); }
+.card.top-v, .card.top-i  { border-top: 3px solid var(--green); }
+.card.top-i                { border-top-color: var(--blue); }
+.card.bot-v                { border-top: 3px solid var(--red); }
+.card.bot-i                { border-top: 3px solid #F7941D; }
 
-/* PREVIEW */
+/* PREVIEW AREA — video = 9:16, image = 1:1 */
 .preview-wrap {
-  position: relative;
-  width: 100%;
-  padding-top: 100%;
+  position: relative; width: 100%; overflow: hidden;
   background: var(--gray-bg);
-  overflow: hidden;
 }
+.preview-wrap.vid { padding-top: 177.78%; } /* 9:16 */
+.preview-wrap.img { padding-top: 100%; }    /* 1:1 */
+
 .preview-wrap iframe {
-  position: absolute;
-  top: 50%; left: 50%;
+  position: absolute; top: 50%; left: 50%;
   width: 320px; height: 525px;
-  border: none;
-  pointer-events: none;
+  border: none; pointer-events: none;
 }
 
-/* rank bubble */
-.rank {
-  position: absolute;
-  top: 10px; left: 10px;
-  z-index: 2;
-  width: 30px; height: 30px;
-  border-radius: 50% 50% 50% 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 800;
-  color: #fff;
+.no-prev {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px; background: #EEF6FB;
 }
-.rank.top    { background: var(--green); }
-.rank.bottom { background: var(--red); }
+.no-prev svg { opacity: .4; }
+.no-prev span { font-size: 10px; font-weight: 700; color: var(--gray-500); }
+
+.rank {
+  position: absolute; top: 7px; left: 7px; z-index: 2;
+  width: 24px; height: 24px; border-radius: 50% 50% 50% 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800; color: #fff;
+}
+.rank.top-v,.rank.top-i { background: var(--green); }
+.rank.top-i             { background: var(--blue); }
+.rank.bot-v             { background: var(--red); }
+.rank.bot-i             { background: #F7941D; }
 
 .type-tag {
-  position: absolute;
-  top: 10px; right: 10px;
-  z-index: 2;
-  background: rgba(26,46,56,0.65);
-  backdrop-filter: blur(4px);
-  color: #fff;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: .07em;
-  padding: 3px 8px;
-  border-radius: 6px;
-  text-transform: uppercase;
+  position: absolute; top: 7px; right: 7px; z-index: 2;
+  background: rgba(26,46,56,.6); color: #fff;
+  font-size: 8px; font-weight: 800; letter-spacing: .07em;
+  padding: 2px 6px; border-radius: 5px; text-transform: uppercase;
 }
 
 /* CARD BODY */
-.cbody {
-  padding: 14px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
+.cbody { padding: 10px; flex: 1; display: flex; flex-direction: column; gap: 7px; }
 .ad-name {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--gray-900);
-  line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  font-size: 11px; font-weight: 700; color: var(--gray-900); line-height: 1.35;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
-
-.ad-meta {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-.meta-date {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--gray-500);
-}
-.days-pill {
-  font-size: 10px;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 20px;
-  background: var(--blue-pale);
-  color: var(--blue-dark);
-}
-
-/* metrics 2x2 */
-.metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-.m {
-  border-radius: 10px;
-  padding: 8px 10px;
-  background: var(--gray-bg);
-  border: 1.5px solid var(--gray-100);
-}
-.m-lbl {
-  font-size: 9px;
-  font-weight: 700;
-  color: var(--gray-500);
-  text-transform: uppercase;
-  letter-spacing: .07em;
-  margin-bottom: 2px;
-}
-.m-val {
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--gray-900);
-}
+.ad-meta { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.meta-date { font-size: 10px; font-weight: 600; color: var(--gray-500); }
+.days-pill { font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 20px; background: var(--blue-pale); color: var(--blue-dark); }
+.metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.m { border-radius: 8px; padding: 6px 8px; background: var(--gray-bg); border: 1.5px solid var(--gray-100); }
+.m-lbl { font-size: 8px; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 1px; }
+.m-val { font-size: 12px; font-weight: 800; color: var(--gray-900); }
 .m-val.g { color: var(--green-dark); }
 .m-val.r { color: var(--red-dark); }
 
-/* ── FOOTER ── */
-.footer {
-  text-align: center;
-  margin-top: 2.5rem;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--gray-500);
-  letter-spacing: .03em;
+/* ── MODAL ── */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 999;
+  background: rgba(13,30,40,.7);
+  align-items: center; justify-content: center;
+  padding: 1rem;
 }
+.modal-overlay.open { display: flex; }
+
+.modal {
+  background: #fff; border-radius: 20px;
+  display: flex; gap: 0; overflow: hidden;
+  max-height: 90vh; width: 100%; max-width: 860px;
+  position: relative;
+}
+
+.modal-media {
+  flex-shrink: 0;
+  background: #1A2E38;
+  display: flex; align-items: center; justify-content: center;
+}
+.modal-media.vid { width: 320px; }
+.modal-media.img { width: 400px; }
+
+.modal-media iframe {
+  display: block;
+  border: none;
+  pointer-events: auto;
+}
+.modal-media.vid iframe { width: 320px; height: 568px; }
+.modal-media.img iframe { width: 400px; height: 400px; }
+
+.modal-no-prev {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px; color: var(--gray-500); font-size: 12px; font-weight: 700;
+}
+
+.modal-info {
+  flex: 1; padding: 1.5rem; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 1rem;
+  min-width: 0;
+}
+
+.modal-close {
+  position: absolute; top: 14px; right: 14px; z-index: 10;
+  background: var(--gray-100); border: none; border-radius: 50%;
+  width: 32px; height: 32px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 700; color: var(--gray-700);
+}
+.modal-close:hover { background: var(--gray-100); color: var(--gray-900); }
+
+.modal-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 8px 8px 8px 2px; width: fit-content;
+}
+.modal-title { font-size: 15px; font-weight: 800; color: var(--gray-900); line-height: 1.4; }
+.modal-date  { font-size: 12px; font-weight: 600; color: var(--gray-500); }
+
+.modal-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.modal-m { background: var(--gray-bg); border: 1.5px solid var(--gray-100); border-radius: 10px; padding: 10px 12px; }
+.modal-m .lbl { font-size: 10px; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 3px; }
+.modal-m .val { font-size: 20px; font-weight: 800; color: var(--gray-900); }
+.modal-m .val.g { color: var(--green-dark); }
+.modal-m .val.r { color: var(--red-dark); }
+
+.footer { text-align: center; margin-top: 2.5rem; font-size: 11px; font-weight: 600; color: var(--gray-500); }
 </style>
 </head>
 <body>
@@ -344,8 +236,16 @@ body {
 </header>
 
 <main class="main" id="main"></main>
-
 <footer class="footer">Meta Ads · Cuenta 1376434332643791 · Ordenado por purchases · Smileat 2026</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div class="modal-media" id="modal-media"></div>
+    <div class="modal-info" id="modal-info"></div>
+  </div>
+</div>
 
 <script>
 const WEEKS = {
@@ -355,23 +255,26 @@ const WEEKS = {
         iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJIpez8-DMvYEuJquy8h3iU6tEgDyx_xpvV7ytixAEGEm-c9d1p0FBuNfXr2KBLeKpGkzFPpQQn_uOSWwz_7aEeC2gkeMAISm49kity3NJurNHNE0Y-UyvrnuD0_a5RtzVAoTTwFgHggjx6rAaQC4Wo1ZzYikySZznCH63BWeijn6_LP0a-xnWTeZph69bjMKcm8XDqTBEeQ1Jj3I6TCI91&t=AQINi7yX69s3LsJ_iy8" },
       { name:"VID_UGC_PROS_Smilados",                                      created:"2026-04-30", spend:344.87,  purchases:148, ctr:0.77, cpa:2.33,  type:"VID",
         iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQI4CSMnZUUWnrvNf4xqK0sSKwAkUP2LefvAWD9I-_pzx_11xkvzD5qlImE69LM07kKgNGDjsaZ73pt176HUL1MGVzWZIWvGdetJya9ixZtfnOuqx7xIIORJiOekGmNDkwam4JJH3b50RKpis0MYUIIFaTnGkaiYsDJBYSGBp7nV1WyKEvY8Dvm0oE0huqzUuThQfqtSwu1e9mfFqbpb6E8s&t=AQJ56zRao9734QQN9A8" },
-      { name:"IMG 2 - 25% Descuento junio 2026",                           created:"2026-06-19", spend:938.92,  purchases:142, ctr:0.92, cpa:6.61,  type:"IMG",
-        iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQK_zFHUnr2kVA0tZSVZVfOt-TTfatIMAHvad-0AGEuYZ13RvreRcKEG2WAXo0m51K783QXi8k2YPsjHk4Ta6QIkLLDbNcF3F6Bv-e66bMfPp8De9AOHPwYZ6wptqpuUC5CGCqxmyBNol-2pwEOC4BPLiFr8OxgnQPRL7Q2XlckXbHLXue-3RA5ySXIrAC2IEuRPlABoNaAkgTtOrYm8C59G&t=AQJeyHYDRmRxcD0hG3w" },
       { name:"VID_Dudas Tarritos - Copia",                                 created:"2026-06-11", spend:2026.30, purchases:81,  ctr:2.45, cpa:25.02, type:"VID", iframe:null },
       { name:"VID - Suscripción Hook 1 \"Sabias que puedes tener\"",       created:"2026-04-13", spend:670.02,  purchases:81,  ctr:1.07, cpa:8.27,  type:"VID", iframe:null },
       { name:"VID_Genérico- Promo - Junio 2026 - 25% en packs",           created:"2026-06-15", spend:863.71,  purchases:77,  ctr:0.66, cpa:11.22, type:"VID", iframe:null },
       { name:"VID_UGC- Gazpazchito - Hook 2",                             created:"2026-06-11", spend:614.98,  purchases:76,  ctr:1.08, cpa:8.09,  type:"VID", iframe:null },
       { name:"VID_Consumo_Smilados- Promo - Junio 2026 - 25% en packs",  created:"2026-06-15", spend:186.85,  purchases:57,  ctr:0.68, cpa:3.28,  type:"VID", iframe:null },
-      { name:"IMG - 25% Descuento junio 2026",                            created:"2026-06-19", spend:60.94,   purchases:21,  ctr:1.18, cpa:2.90,  type:"IMG", iframe:null },
       { name:"VID_Consumo_Smilados- Promo - 25% en packs (v2)",           created:"2026-06-15", spend:75.89,   purchases:10,  ctr:0.69, cpa:7.59,  type:"VID", iframe:null },
       { name:"VID_UGC- Gazpazchito - Hook 1 \"Con este calor\"",          created:"2026-06-11", spend:49.87,   purchases:9,   ctr:0.95, cpa:5.54,  type:"VID", iframe:null },
-      { name:"CARR_Lanzamiento Gazpachito - Contenido orgánico",          created:"2026-05-05", spend:30.64,   purchases:6,   ctr:1.15, cpa:5.11,  type:"CARR",iframe:null },
-      { name:"IMG 1 - 25% Descuento junio 2026",                          created:"2026-06-19", spend:45.90,   purchases:5,   ctr:1.18, cpa:9.18,  type:"IMG", iframe:null },
+      { name:"VID_Lanzamiento Gazpachito",                                 created:"2026-05-05", spend:0,       purchases:1,   ctr:0,    cpa:0,     type:"VID", iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKipGVlWmHLkHhaAeS_sT58GrSYNIqPAKnv_5IcPNaojq__1AbElK9p-XoKrovtqfokBzg85RQjGgQbxXTdM41GSQlEr0Ll-DM0cLserPt3RCAnBaph2nZbI4Tzkzp_PsLTrSLKVqhdNH6MoRP7GAaMmuw8WvYiqG0hzoJ5pM2dNOO4gIffDGs5ymFBQjSDgTf-tkNKPjzrFIgCfJVs0mX9&t=AQIIyg2qqI52IHCAIaM" },
       { name:"VID_Paid_Partnership_Juan Llorca_Gazpachito",               created:"2026-06-22", spend:71.76,   purchases:2,   ctr:2.28, cpa:35.88, type:"VID", iframe:null },
       { name:"VID - Suscripción Hook 2 \"Si tienes un bebé...\"",         created:"2026-04-13", spend:31.86,   purchases:2,   ctr:1.07, cpa:15.93, type:"VID",
         iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJTfadXZDQQYkUW8bW3OdDiiMOEQ5NZfmc0Qu2RCyie6GxRFQrKl3fxduStq2ticDK13EYu2M3Z0uJSrsnAS4R4nEa_mbXsh4wAWn8dbXtllmoiVjBQklW7PbPDJfmwdUCF4yycc_EgjIlcGfZ8mK1cOxarcqp1H5RIln3ce4O3idihG53PGinruVIhVzcb9_RezT_1lD3DO839aq1K6T8m&t=AQJjKwbONGHRJ69d7iY" },
+      { name:"IMG 2 - 25% Descuento junio 2026",                           created:"2026-06-19", spend:938.92,  purchases:142, ctr:0.92, cpa:6.61,  type:"IMG",
+        iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQK_zFHUnr2kVA0tZSVZVfOt-TTfatIMAHvad-0AGEuYZ13RvreRcKEG2WAXo0m51K783QXi8k2YPsjHk4Ta6QIkLLDbNcF3F6Bv-e66bMfPp8De9AOHPwYZ6wptqpuUC5CGCqxmyBNol-2pwEOC4BPLiFr8OxgnQPRL7Q2XlckXbHLXue-3RA5ySXIrAC2IEuRPlABoNaAkgTtOrYm8C59G&t=AQJeyHYDRmRxcD0hG3w" },
+      { name:"IMG - 25% Descuento junio 2026",                            created:"2026-06-19", spend:60.94,   purchases:21,  ctr:1.18, cpa:2.90,  type:"IMG", iframe:null },
+      { name:"IMG 1 - 25% Descuento junio 2026",                          created:"2026-06-19", spend:45.90,   purchases:5,   ctr:1.18, cpa:9.18,  type:"IMG", iframe:null },
       { name:"IMA_Comparativa platitos - macarrones - Copia",             created:"2026-06-11", spend:4.16,    purchases:1,   ctr:1.80, cpa:4.16,  type:"IMG",
-        iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJRYS7V1lCiK-BbzusbqcymMQ1-acHujrMGCAz5vAz3tcrGzuNbO4xTFAIJIfZkEpfKQsvchOpbZhcSPNl513pQqIkxs04BblxElyNOY9gV3khUkkdG1o_zU10GZ9_RQCogUubKJ8987MO3rR7exzMs5MnnDoF94z-te080ZK0vyM_zLW5jHmL3dsaglugU98SDiVcutyN99A0qlzHlf3ed&t=AQIeP5-hd8Z-0TpPN6w" }
+        iframe:"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJRYS7V1lCiK-BbzusbqcymMQ1-acHujrMGCAz5vAz3tcrGzuNbO4xTFAIJIfZkEpfKQsvchOpbZhcSPNl513pQqIkxs04BblxElyNOY9gV3khUkkdG1o_zU10GZ9_RQCogUubKJ8987MO3rR7exzMs5MnnDoF94z-te080ZK0vyM_zLW5jHmL3dsaglugU98SDiVcutyN99A0qlzHlf3ed&t=AQIeP5-hd8Z-0TpPN6w" },
+      { name:"IMA_Comparativa platitos - Rabioli - Copia",                created:"2026-06-11", spend:12.30,   purchases:0,   ctr:1.89, cpa:0,     type:"IMG", iframe:null },
+      { name:"IMA_ Paid_Partnership_Juan Llorca",                         created:"2026-03-27", spend:3.38,    purchases:0,   ctr:3.79, cpa:0,     type:"IMG", iframe:null },
+      { name:"CARR_Lanzamiento Gazpachito - Contenido orgánico",          created:"2026-05-05", spend:30.64,   purchases:6,   ctr:1.15, cpa:5.11,  type:"CARR",iframe:null }
     ]
   }
 };
@@ -386,54 +289,44 @@ function fmtWeek(k) {
   return `${f(mon)} – ${f(sun)} · ${mon.getFullYear()}`;
 }
 function days(s) { return Math.round((new Date(2026,5,24)-pd(s))/86400000); }
-function tlabel(n) {
-  const u=(n||'').toUpperCase();
-  if(u.startsWith('VID')) return 'VIDEO';
-  if(u.startsWith('IMG')||u.startsWith('IMA')) return 'IMAGEN';
-  if(u.startsWith('CARR')) return 'CARRUSEL';
-  return '';
-}
 
 function noPreview() {
-  return `<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#EEF6FB;">
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7A9AAD" stroke-width="1.5" opacity=".5">
-      <rect x="3" y="3" width="18" height="18" rx="3"/>
-      <circle cx="8.5" cy="8.5" r="1.5"/>
-      <path d="M21 15l-5-5L5 21"/>
-    </svg>
-    <span style="font-size:11px;font-weight:700;color:#7A9AAD;letter-spacing:.03em;">Sin preview</span>
+  return `<div class="no-prev">
+    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7A9AAD" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    <span>Sin preview</span>
   </div>`;
 }
 
-function card(ad, cls, rank) {
+// cls = 'top-v' | 'top-i' | 'bot-v' | 'bot-i'
+function card(ad, cls, rank, adIdx) {
+  const isVid = ad.type === 'VID';
   const d = days(ad.created);
   const created = pd(ad.created).toLocaleDateString('es-ES',{day:'2-digit',month:'short',year:'numeric'});
   const spend = `€${ad.spend.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})}`;
   const cpa   = ad.cpa>0 ? `€${ad.cpa.toFixed(2)}` : '—';
   const ctr   = `${ad.ctr.toFixed(2)}%`;
-  const lbl   = tlabel(ad.name);
   const avgCpa = 7.59;
   const cc = ad.cpa>0&&ad.cpa<=avgCpa*0.7?'g':ad.cpa>avgCpa*1.4?'r':'';
-
+  const wrapCls = isVid ? 'vid' : 'img';
   const media = ad.iframe
     ? `<iframe src="${ad.iframe}" scrolling="no" allow="autoplay" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>`
     : noPreview();
 
   return `
-<div class="card ${cls}">
-  <div class="preview-wrap" data-id="${rank}">
+<div class="card ${cls}" onclick="openModal(${adIdx})">
+  <div class="preview-wrap ${wrapCls}" data-type="${wrapCls}">
     ${media}
     <span class="rank ${cls}">${rank}</span>
-    ${lbl?`<span class="type-tag">${lbl}</span>`:''}
+    <span class="type-tag">${ad.type}</span>
   </div>
   <div class="cbody">
     <p class="ad-name" title="${ad.name}">${ad.name}</p>
     <div class="ad-meta">
-      <span class="meta-date">📅 ${created}</span>
-      <span class="days-pill">${d}d activo</span>
+      <span class="meta-date">${created}</span>
+      <span class="days-pill">${d}d</span>
     </div>
     <div class="metrics">
-      <div class="m"><div class="m-lbl">Ad Spend</div><div class="m-val">${spend}</div></div>
+      <div class="m"><div class="m-lbl">Spend</div><div class="m-val">${spend}</div></div>
       <div class="m"><div class="m-lbl">Purchases</div><div class="m-val">${ad.purchases}</div></div>
       <div class="m"><div class="m-lbl">CPA</div><div class="m-val ${cc}">${cpa}</div></div>
       <div class="m"><div class="m-lbl">CTR</div><div class="m-val">${ctr}</div></div>
@@ -442,13 +335,17 @@ function card(ad, cls, rank) {
 </div>`;
 }
 
-function scaleIframes() {
-  document.querySelectorAll('.preview-wrap').forEach(w => {
-    const W = w.offsetWidth; if(!W) return;
-    const sc = W/320;
-    const fr = w.querySelector('iframe');
-    if(fr) fr.style.transform = `translate(-50%,-50%) scale(${sc})`;
-  });
+// store current week ads for modal lookup
+let currentAds = [];
+
+function section(ads, cls, emoji, label, sub) {
+  if(!ads.length) return '';
+  return `
+    <div class="sec-hdr">
+      <span class="badge ${cls}">${emoji} ${label}</span>
+      <span class="sec-sub">${sub}</span>
+    </div>
+    <div class="grid5">${ads.map((a,i) => card(a, cls, i+1, currentAds.indexOf(a))).join('')}</div>`;
 }
 
 function render() {
@@ -458,11 +355,17 @@ function render() {
   document.getElementById('bnext').disabled = idx <= 0;
 
   const w = WEEKS[key];
-  if(!w){ document.getElementById('main').innerHTML='<p style="padding:3rem;text-align:center">Sin datos.</p>'; return; }
+  if(!w) { document.getElementById('main').innerHTML='<p style="padding:3rem;text-align:center">Sin datos.</p>'; return; }
 
-  const sorted = [...w.ads].filter(a=>a.spend>0).sort((a,b)=>b.purchases-a.purchases);
-  const top3  = sorted.slice(0,3);
-  const bot3  = sorted.length>=6 ? sorted.slice(-3).reverse() : sorted.slice(-Math.min(3,sorted.length)).reverse();
+  currentAds = w.ads;
+
+  const vids = w.ads.filter(a=>a.type==='VID').sort((a,b)=>b.purchases-a.purchases);
+  const imgs = w.ads.filter(a=>a.type==='IMG'||a.type==='IMA').sort((a,b)=>b.purchases-a.purchases);
+
+  const topV  = vids.slice(0,5);
+  const botV  = vids.slice(-5).reverse();
+  const topI  = imgs.slice(0,5);
+  const botI  = imgs.length>=2 ? imgs.slice(-Math.min(5,imgs.length)).reverse() : [];
 
   const ts = w.ads.reduce((s,a)=>s+a.spend,0);
   const tp = w.ads.reduce((s,a)=>s+a.purchases,0);
@@ -477,23 +380,78 @@ function render() {
       <div class="scard"><div class="lbl">Creatividades activas</div><div class="val">${active}</div></div>
     </div>
 
-    <div class="sec-hdr">
-      <span class="badge top">🏆 Top 3</span>
-      <span class="sec-sub">Mayor volumen de purchases</span>
-    </div>
-    <div class="grid">${top3.map((a,i)=>card(a,'top',i+1)).join('')}</div>
-
+    ${section(topV,'top-v','🏆','Top 5 Video','Mayor purchases · formato vertical')}
     <div class="divider"></div>
+    ${section(topI,'top-i','🏆','Top 5 Imagen','Mayor purchases · formato cuadrado')}
+    <div class="divider"></div>
+    ${section(botV,'bot-v','⚠️','Bottom 5 Video','Menor purchases')}
+    <div class="divider"></div>
+    ${section(botI,'bot-i','⚠️','Bottom 5 Imagen','Menor purchases')}
+  `;
 
-    <div class="sec-hdr">
-      <span class="badge bottom">⚠️ Bottom 3</span>
-      <span class="sec-sub">Menor volumen de purchases</span>
-    </div>
-    <div class="grid">${bot3.map((a,i)=>card(a,'bottom',i+1)).join('')}</div>`;
-
-  requestAnimationFrame(()=>requestAnimationFrame(scaleIframes));
+  scaleIframes();
 }
 
+function scaleIframes() {
+  document.querySelectorAll('.preview-wrap').forEach(w => {
+    const W = w.offsetWidth; if(!W) return;
+    // iframe native: 320×525. For vid (9:16 container), height = W*16/9
+    // scale to fill width
+    const sc = W / 320;
+    const fr = w.querySelector('iframe');
+    if(fr) fr.style.transform = `translate(-50%,-50%) scale(${sc})`;
+  });
+}
+
+// ── MODAL ──
+function openModal(adIdx) {
+  const ad = currentAds[adIdx];
+  if(!ad) return;
+  const isVid = ad.type === 'VID';
+  const d = days(ad.created);
+  const created = pd(ad.created).toLocaleDateString('es-ES',{day:'2-digit',month:'short',year:'numeric'});
+  const spend = `€${ad.spend.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})}`;
+  const cpa   = ad.cpa>0 ? `€${ad.cpa.toFixed(2)}` : '—';
+  const ctr   = `${ad.ctr.toFixed(2)}%`;
+  const avgCpa = 7.59;
+  const cc = ad.cpa>0&&ad.cpa<=avgCpa*0.7?'g':ad.cpa>avgCpa*1.4?'r':'';
+
+  const mediaCls = isVid ? 'vid' : 'img';
+  const mediaEl = document.getElementById('modal-media');
+  mediaEl.className = `modal-media ${mediaCls}`;
+  mediaEl.innerHTML = ad.iframe
+    ? `<iframe src="${ad.iframe}" scrolling="yes" allow="autoplay" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>`
+    : `<div class="modal-no-prev">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7A9AAD" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span>Sin preview disponible</span>
+       </div>`;
+
+  document.getElementById('modal-info').innerHTML = `
+    <div>
+      <span class="modal-badge" style="background:${isVid?'#29ABE2':'#8CC63F'};color:#fff">${ad.type} · ${d}d activo</span>
+    </div>
+    <p class="modal-title">${ad.name}</p>
+    <p class="modal-date">📅 Creado: ${created}</p>
+    <div class="modal-metrics">
+      <div class="modal-m"><div class="lbl">Ad Spend</div><div class="val">${spend}</div></div>
+      <div class="modal-m"><div class="lbl">Purchases</div><div class="val">${ad.purchases}</div></div>
+      <div class="modal-m"><div class="lbl">CPA</div><div class="val ${cc}">${cpa}</div></div>
+      <div class="modal-m"><div class="lbl">CTR</div><div class="val">${ctr}</div></div>
+    </div>`;
+
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  // stop iframe on close to avoid audio continuing
+  const fr = document.querySelector('#modal-media iframe');
+  if(fr) { const s=fr.src; fr.src=''; fr.src=s; }
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', e => { if(e.target===e.currentTarget) closeModal(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
 document.getElementById('bprev').addEventListener('click',()=>{if(idx<KEYS.length-1){idx++;render();}});
 document.getElementById('bnext').addEventListener('click',()=>{if(idx>0){idx--;render();}});
 window.addEventListener('resize', scaleIframes);
