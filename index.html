@@ -36,10 +36,8 @@ body{font-family:var(--font);background:var(--bg);color:var(--g900);padding-bott
 .wow.flat{background:var(--g100);color:var(--g500)}
 .sec-hdr{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
 .badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:5px 14px 5px 10px;border-radius:10px 10px 10px 3px}
-.badge.top-v{background:var(--green);color:#fff}
-.badge.top-i{background:var(--blue);color:#fff}
-.badge.bot-v{background:var(--red);color:#fff}
-.badge.bot-i{background:var(--orange);color:#fff}
+.badge.top-v{background:var(--green);color:#fff}.badge.top-i{background:var(--blue);color:#fff}
+.badge.bot-v{background:var(--red);color:#fff}.badge.bot-i{background:var(--orange);color:#fff}
 .sec-sub{font-size:12px;font-weight:600;color:var(--g500)}
 .divider{height:2px;background:linear-gradient(to right,#B3DFF5,transparent);margin:1.75rem 0;border-radius:2px}
 .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:.5rem}
@@ -98,7 +96,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--g900);padding-bott
   </div>
 </header>
 <main class="main" id="main"></main>
-<footer class="footer">Meta Ads · Cuenta 1376434332643791 · Smileat · Actualizado 30 jun 2026</footer>
+<footer class="footer">Meta Ads · Cuenta 1376434332643791 · Smileat · Actualizado 7 jul 2026</footer>
 <div class="modal-overlay" id="mo">
   <div class="modal">
     <button class="mc" id="mc">✕</button>
@@ -109,48 +107,50 @@ body{font-family:var(--font);background:var(--bg);color:var(--g900);padding-bott
 <script>
 const AM="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1376434332643791&selected_ad_ids=";
 
-// Iframes frescos — renovar cada lunes
 const S={
-"52530115390482":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJ9gadwfVSRb3TfxUH-rTVQwudZcWyIeWdbcZBC28ba364UjqeZ3Qxg6MAT-QHwCidXBiOvwc2G_YAjONopKvfWnv-J89VsontbmziOzHhnu2iPmyOSpDWltJ__UWHPc9Q8IXDRG15q38mzoJaoqiJOoKBj4ZWKl3Kf0dYx5IQq_9gYFeYyLT8itkruTpxCA0swwpBPj0ZuK0R7xVLIYjK-&t=AQJM-J5na8rWBWXWtzU",
-"6958422229678":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQL7zFGVJbbcvx7ta_STsRJEJIEqiWN_dRDuXbZeEJKNAiyI7KieaTrnCMkwZ6u3BQ0ryRxaXZ0Mk9ecVar9dtdiVR7yrHjNqtfRPQGElFk6Pn70QycET9Y087ura6bm9y5NOQ4W604m2wRVD2ky7-LKmlDOwypl6ZlborKhl08vXo9hutYUGzWDmU2i43bO5cgaq1coWIVzMRD-n8F8BxD5&t=AQKhnoVNoHz6hYOs5OQ",
-"6969966232478":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJLDB_rVRBpaqpwWUXXgnoFXjA_Sk3RkkHlrdbZdrRk0_R0AobGCdUBw001Lxb0vXHEjhKZaWfXJQarkYhjEA3Khe_Ci8uxJEewbQko4UaXCPKlSEGJzRLjdhUDmqq5fOLYi-npOio4GtKGrKgZfqagTwoqOdCQEoZ66nik5VdUxTgbpo9GHZcOMcrdE1-9JW_pg3U0jPDvhwbSUfZtF8ys&t=AQJRJfMITctknMJboKQ",
-"52514276901482":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJv2aKyNVwvsGbRanBYFqcJVkd3xz-nbU1vrYzEz0Lx97LYaukoLDf5gEM75OHkTBLEEgQO1ReZnn3_EU90AMDH89cGzs5u826fDl-eqBktUCvIVHgVFJybKPks0o2o09MGsZsH6ocKx4IpU4Rt6-zrA_v2AHPsanssQe5N8UckbebkRHF4pArQ5MxKC0SFHvZVBpHNCwORtRDQtLptea1g&t=AQLTy9rJx7DyUzmIV6g",
-"52514223353282":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKMnP-FHFVl37rkJuPjn2mnkV8UCgIgUbYIokk5jO-Mo5ZVjk0g5a_1DYnrkZ45VogexiVMIZkhdVFgpR6xwOCoBlewi78m3CbUBJuB4UfxnWpaa4ut76j_oYkGWtbV_kbzGNjKjJGAQWfH5YvdjQnxKGKhdziuOsvnhMsXKOh-NRGRPRf-wS2VqUJLe8YolRMr1lYpPjG3vgSOl5G7PegO&t=AQLs8HoExTzsxoI9c9c",
-"52528248630482":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKdxJhZruZJVm1MFNPEZ9iz27n0E1MnAtcgOX7ZlSKdEWKaKypYE19u0a9msug2TGiJkhvgnwYYpl8sxZ_DXqGUq-05ONoX__mD9G1QEKvyO0XCJQgK6VQWrhhTOJeu5QwuX7_TjwnUIYwU9MbKITdLKMsR0Oo4sVeBAvgothb-sitKW64xejjZqw_mdLHPvJmlwassK2kMo0CMSSemT3Vx&t=AQJJhj1mesCOAOjFxDY",
-"52514199073882":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKyvE2Z3PBHAECbzGNzkta9TH5KUy2-l38bg8b7u8rzjsaKme4MnDCYIeUQEqsKcod_dLNDpZAg1Y_71Q-22XedYN2R3b0WOtjVDXWj9cW4MGh_i_FuxEpJfSC1tWaKbGiqEzulLc75elZdqcdU4z4ToIV-lsnB9lQW5dkokEsbPpFCUWbWWGNpjI_Xp6_D95V7jY2GfQBgPENU95U5YBkq&t=AQJ6X6KaiwZJH9c-xps",
-"6958428746078":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJK8Mn7TKGwLdk8FKA13-AWW3bimsKJWlaO8Vwe_zbeDAvXr4I4kBdsfsqe3dnGXbnb0tYGU9Z1Gq_4o-mfqg2nAgg9rKtFBx1guVf7L5ScPq6bgmQJnSOLY66LkoYZeq5HqCkkFnPY_zx2oa1T8eQ3vpyHp2BIo3-dTvQJ-tSan4RZr2_00Lc-fES0_ZJY_m53QHdwqqUAOd0Z6Dl1QfAw&t=AQKPXATy9RD7aYXTQNg",
-"52529903303282":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKaG15G-eZGFcXCvYIlNQH8yvbowvKUkPQmnB1dYQZkq2BOxCnXoFAvgtDX0NslVaiz476gzjYsY4G7YwmlnW5mT27u8eb4nN95T7X_eRUayTxOqKjZZWZtuQ2cXhesHuCiS2f-QJvefVvtx4YNKDBaa1Nv5_RiPptVZ1WecUxTLHrq5BUm9GWRvRkDArc6Bd9UMQDpcdmUwbRJGWjgBvXw&t=AQIZpXPm1KoV2YE3TcU",
-"52530286701682":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKkpfr-P90wgzZe7P6KbeVmiW5MJoV6f5bpD9moUYhCz2SwYnokgMBILrBfRuiA5toi7FxRysxs7AM9uAbETPzL9gMKH4qwXz6DwbAF2BcBGvAnKIpUY6FrSCA1OGRIGxTRGa39rp1VBqhq1zpn8OX9ITd6DizJUFmS1DQINg6s__W3HMYSKANz-ZhKUgJgv79iwzlWTNHqMJBPIrLCXN39&t=AQI0ouSHoHWFIyI7PGQ",
-"6979351783078":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQIN25lGO3gmzYFeR_MafAFLQ7TOSuB51-smXDXpssNntw5Zpqy0dsJGhmdqJucOCgybO64D6UPpxojXD3_AmcstpsUhHYz_DTEEURmvyfE-HvjBNOqmoynX3dNzkuvPenhWPhC52U_DhTmo9TpHNs_RfAdrf38Okl_z0j3OtXVu7UgJe3HMx5KmnNDYaJFThB88u3bWRsMbwEz_bk5NIzrG&t=AQJEVp-O6916spdeap0",
-"6948492896478":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQImj_iPdDCFovA2R31U6oUrI7pEh9aa1f2CUJJvkm5L1po6dWU-9H2hucE1mFy1G4xSO_ioPm0wtLWH8276lDvskcuiDBHFmRYkU-pyHmMTYCut_DzBVmQLaPVJv9eAjIBMHBy6ELnEmDiMM9cC9O7960Q29nr6rdZngG0qQkx73olxRSXolD1gv_KvQsYP1IZtNOSN390-xiQns0EiGLI4&t=AQIaG8gZo0AFmt52wuQ",
-"52529627709682":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQL7D1Aolhkaef4JnXEXixGxhy7X6rXJ7GR2wdCUhog-Ihe-lV-swrwKmgDlaCIyYveYRkFby1fmOOIWKfOZVIpOlsdg2w4TIB5rXrdVwJN_n6AfEXGnbzURpAtfX1Ev86LbS6LAGjLoyG0J2JS2cWtE1xW-YBzVEXrKoCqQDPInMA6pcS63FL-91jHYlL6IN_OS_QTmqsKsS7SsbweE89cK&t=AQKId_wy6QBaOTTbMeM",
-"52533610786482":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQI7ld0-LaiW4dQTn2SI56ov-NkPCXOAhwzVDjs5NO5Y05NuWs6g-ZXXiPzcrA8MJW2-sxy164G-FCJOMtIiZMYa8iqXXNm-KdNlGNrPor2z2avtHFuRzizHbdBr5iQtMRSnlHU0ZOHvqwywL6BG4R1PiDtNk2dlI7VGbijdhZ3_b6B1S6lTX_D0GalxsxXwWRYSY4TEDR90yKrWV374YniR&t=AQLevw9UnU9VEmKGQSY",
-"52533610786682":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQK6K2C2qVw-X93G1SD_viDwX3QuICACxjX8p40amXvZFqYYt0EY6vv1oHK1BN6fNdVM_2jG1ENibsH_3NkGUc5ZG2t7qGCEE5J-ESVR0v8XTqEvGgx0gWYv3NFXYF62AlJ_XIeAWlXHR1AZnISNeZKoj0mFJyUrMHSgGOUVO-zXkrR_HY1BR2Vy8yxzMxCWPauEwKHtbnZ8OM5svTr3yOks&t=AQLuQB30UahEGFJVIko",
-"52530105785682":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQIxszIeeYUXEXxBUfseBhJ77llk73Mdm6cBh7y4LsXa9DHTfY2ct1L5L84yC8QmcOoRngBzyOXfBt0-gmkndkdS-A10bACNRJLB4Wkatj167t0wfreKMQqjo4x2wx8eXiwmeO82kgbemsDDUpbMxNxJfG3-XkWqpilkkhZUPWXYSDJYXuFb8ZpMUByh1StL5oOFBviX7CTB3ZbDZ1at7LHx&t=AQKvtrvfoEouEoO6KYg",
-"52514276900882":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJK0Wyy1i_bXQ5Xrl80j2ulgTZckmhiFpARqIEhGgVbX2MTPzvt0K4f4jC1fENr80ZxL7fjQapAArQFPRMPwXHmal0wxLPowxnGw-soiMCVSzbVq_dldImOXdXWFT317S9zVUdQSt9T3cP4VtTJ9eHNeSf2luW9OL2twMHqjgqeBAI5kMqV_C_Ki-i4J5W85MdqW8P7E06zrm9CZZlBQ7L4&t=AQLfNqDNu5CoivDYUow",
-"52514276900282":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKFO9l_M_68i1XdWkeScjOspX_fxjKlGQBT6PB9K-HV0Q1JHbi_pTrcpn4wfZurFufjTGfahP0iRNEgI4nSQq5uUb2NzhPWaugQyDXjGnOGJ73EfWOFZbl8nZNILjwnLsN-F34SsmyamjPD2MPr5UjV7MBWX1fFZHraPPl_YCTpJRZ_HF88wn3-Vsntb5QFyTIqRQRjdTCBmJphacuNXnZR&t=AQJXK85_KKnyr_-_7Fw",
-"52514276900682":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLGk7L01fy_GoNQiCBYsM0X8AOKUoWZ46r8B6ZG3mlTAqXqjq2zIrv0BiavHegtss8IW2ZMLO-Hm9lfOBPp1C5m7XUOhWBLVZn6iG22krEpT5R6SAwWG0FiCbhdqBBPMg5JKtaXEm4ZPF70BhqIfGPKipKwj6TEFySQiNAwUX2uaAfm8HR9BTzLUfZkue-JQN8vbpByyZjOAQukayPs_M4K&t=AQIKoB_xzCkH5osumcM",
-"52518255264882":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQIZmlN4fRaG_dNm5EHqM4JyCz-qy-c1GMcAynmbMuRH7KS9GMCr1UQ_fLfA-CYdwuqWLvInOPFqvTYD47qyZhx7GedKig1hgAs7tEVlb1JtTGkSr_FIyjXp1gSPwUqZmcb6pqe8Mj116yV2-E_rnc5jJrebrnR6so00se1NQScdwWKMWkb2dOy4A79F9hUPKmnrZdfK4yCDo8iTbLQbKaxG&t=AQKP418_tlTVHtiStZ4",
-"52523846493682":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQK2JrflkYBY6rQg66bNTcB4COiMfZA9SCMp0Dkdj3ZFAC3FyzSiMmnLYOcsaC29RNB6wcLK5QoEIRPuxdb1t63s7Ea09f9IYa4A64pIF6xjsnw3UdlZ5hY_BaA8Dz2quaQ4JXE_4hx3Q2Nhnn4YrqQ2BklQsLbV8yNa1xXEt43Bwf0H9NgD3zC5PdSyU_N4v-i2mgzdu64iqAXOIeTmENIE&t=AQL9WzaSGpidF-dUHSA",
-"52523669186482":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLDTAMRjFixScYiVtdjqy31O7Yd-H2GDFC3nSssGPS7B8E7xhPNqLPVppa6GRSJ6G7ggFxpHvM_3wRPRJ34DR75X5Z6EYjGoN7342HtJcStxeXYOqQa4Jd7rfw4G-pdLgmLnVliIB1yMx-5LQZw9H8J36viWNFrgOe2DhLQylGwk5l1wqEAMp7rXAF7TfQZ0YfULc7CpiY6W6Nnr2j5fhIt&t=AQIMgYZYXLu6YvNsISQ",
-"52518254859482":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLRhn2l8-vfQiFGi9UnUCzJRwMVhGghNEQHmQcp2kJHqWsLoWU_pEg1iYS78rTHSpxR0lvs4SSnwd23wAl9qszL90PefAO5DfIcsdNbCYgvxt3FulM38fyafdYh560_lNJlQIPYF59jnFwbnSuNvqHfj4LlAY9sI6Xw14YxU6hfeCvSzDT3-8Ta-nj7_Ff2R7KU3N2k2Z4On0gKfWoG7zCL&t=AQKCYMrkWUpjJwnDL0k",
-"52518255264682":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKoQ11q-Wfz4nvVKM9l9yTAY_pfB43xWtuoK9DYWmqwmk8m24gFp9pBopVc0qnD8KHyiR4oerLw9naHP9qjKynYX67FYqqDB1p6876WgR2hAOg4RzGSv5mEDm2_UAQaV4-w8N15k_xAm6D9B1roSVfh7T7H0FnwE64smZZy51jmXYSICRZXzIKn40V-HxISSVQh77Kw2annFSqdci4-SCMB&t=AQLSNhdKCMMaM9OqsdA",
-"52518253256282":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQIdyzaJz0qpQo8oW_smjODk88LtoR6J6uP60bYOi1anJhMD8iW71wKaVnMQthdZdNt7ksVnJEarMwu3jcf87vL2uJ_u_sb9d4NqNfDhlYCnmJokzuXZjZo7_McJdPIdzIreHSycHl3tANo_24PY23zX8GJrLp6YeFU1OxqV26AqGb1AubNAPIdC5uR6cil7gMHFQWnHCj3LguOcamsRIYda&t=AQL1V-F5WkXUoIb_m2U",
-"6973419646878":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJXPhxfuXimJkCq8VjLDNdSpE_4dIllP4LST5akPtlS4eHOKT_8aGDzbjjsXV1NsZuuSNUyI7U8w-ogJkI1GbjEJQ3izGHGXyE53jm3sg5UlWqq0xaLX9jdqofQ4eHiTqSNuE9pY2fReKW7q7lIv6bD81q6AJy9GqdDd2YbgigZBLqELbg8KxSaUW0j9_MvOC2mP-KuLnkmZzbgycdZpyD-&t=AQKrms8SLa9nn8Ixl6A",
-"6996619093078":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKP5RibLu33g1dqrTcN34V6kLZDdfZD9hQZWKhs0jSDPIal4R8dlYTDWYtA1910os84QdJ1y_gy_n4wjYdAHmL_vHkH56EZpAeEUhC1hK0ZOJzeDcbbmVuCjsO6YevjuPVBdPPSKWshdVhZocPWtZi7wv77bsgT9tIyP1nnojD354XAYRA7IlLIdMT_2wFkcqwD5VhNWCwdmA9QoPzeexCE&t=AQIXJr2gN1qQ_8-ANS4",
-"52503632881282":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKXzOwU03eKP3Kw6WNLy7qa2alSJaFw_yMUrNnNaEqi_5v_iQsYD6kM5Zp-Nv07ASD4M2xuiqA88CaV5K41rUm3AT4cAH7WZmx3dyNQyyn2OnELKl7MYgpPyEGvSVjI13rNQa6fcWOhcb60zpnG410BNnK3RoxQeLlyU2Rv1Z9jizh0zHbsf32T8too0bFInPA4O2v8pGXVZrZja3ogxvC7&t=AQLXcmzWi-hPaPoL8VI",
-"6996644941678":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJHeVkh_goyT6MaOzU8Ac1rYMfXMChlM4o050oSzVamW3N8EFXGWgb0mXlZXRYQhgc_ygGbSPOinm_VN2Zdcj7yafbOJWGQyAGuYxST09tsPUPgvSNskkicYKkgI1EzlII_gYwslX9okj4E8d94GJdqNAQSo3QE0mkjlK3PS1NLwovobvmHoavWKZweyHCJga34KvQfO3IdlbIYrJElZVMK&t=AQI4ZaHm_HgGw0k5TNA",
-"6996658783478":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJ62kL6r79UFYVy4xieFur7vITA0UWaeQPqvN1XmkZkDar5H3wlNwt_9m6rqrabfw_ORPmseO_q4ltW6Tu7KPnHrM-pD0SRv7_NHaJw9ysfwQY7S2imrdQdlMRW_93IZIdK0_kAvWe2ASyl-HFc-ZS2NT0UaO9ZI7b6bHCQZ5_6hNCqM_Arv0e5NiWpDecxKhRUb_BB-lVAk_UP-8wdNGiJ&t=AQK5OBsyKkC8wAHKHws",
-"52503632881082":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKIDW2fI1Ybj7-Yzo2B0487p8rLXdhPgujwR3XRsPvTAnM-KwCXxzLUNU1jwHO4Mds2v54TaFync3iT4hvgeWOKtaZ-lDKu0FlhZyuKIfgdO8VewEEuVNLbCIvsCZZAo3yMKSiSha8RQO1CdCcYkpzlEjwJcICeJvvOvfRA6HJF3c5OwYVSnfCaXAxjg0izQ4P-Tb0U-Ls9yauehclYKzBY&t=AQJSG7plncXF0EVffDc",
-"6996655181878":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLJnpC64Vixyy2O3KUZ1k3Derq6Aoxg4XEt9PZI4zCLLfkh-HgH7lfOUNDBYPHwze5jmcs3EMDZBtjJnnvx11J0axaeYHVJZsX1fgxvXCfHbaVexZ5yF7Wd2tIcVBoC70Mp6q9rG3VAvgKP2LzDyJs0RfvFhTQQOSB7woz3NqWQUZhNTGPMTBJ5jwYDgkdd7YXjB43iz2FPQc8OqhYWWrIj&t=AQIEUSSGx4UvXGEL-nc",
-"6996661665678":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLw158BEk3HuX-iLY7ZnMOYPsKdOxqZfFq5GfJqFYwP5JTQzoCzJpXKAyBtibOEkkNGuqrhxw-_abk1olu6DPqnPl-qr0-vRK0KiFSrQJw5Tt_pPIdveJUVzFAdhbdH7rB9o66yPW0OrjjxRamRVObQ-CxbtE8VTL34BKyY0yT4BazeXjrk9kTWpy6rUmZJtRz3jeoWzWSnWFyDqDgDT7zO&t=AQInG70Rsw3g5zRQGaY",
-"6969943500478":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKR2iZffiW4XCM64qlPoRD8hQoLFBW56ZiLd20fsW0F5_Fx7kMR1aJpfSsl-bwnoSIPrnJYaqkkJyKMWg0GYLs9WaTQwLUhgv8buxji4qAVL8v4LiWTkE6DkdWEESDGzDzH0lTaf05ODKGFsPQG2hZoWRKJNmdf_fplbOYuhM1GoQzqElxT_z7liWXRwHPIMcDhB5Yz06p4YISgQpyCTI3k&t=AQKk-jERqTBbl-AIRm4",
-"6973415546278":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQKsecrzo2k7S6mU6s8Q1uIzCT0DxKxHd-IeAucoOvyM17D1ovmxhDl0YN-Lhw1ZQhrk-U171htZbxlzpzNN_8BxgKGqsxQYRYvUBnXeoiB9E1kAP0Wj0UGDN8k8nrwOlSd5bSHHHAcwFLKAneP-Eu3g9sMUy4RffhzZjmIuHJA_odPLQbqdj_3qhlwavwVMVdv2tDXU3r5vLOFcmeSho4El&t=AQKIlFyk4OmawpWkOsE",
-"6973407947278":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQID-u27vupBCR-8ohGAmEouHke9MEplLhacXA12QjuwM87yXTUT-cnL8rWiSncy29O2YG5I88qjCluKv4L_avtnwCSMBNmcF1ywYNU-6N708vOnYM0tZ1ibyiaTNj-YvgeQxXyFf5AyrIXV-Pesm92pqnYAwOsZkY8PQmWxPa3cgPNKbIa_sidgcP3lwfhA5oJdgzWmh207I4BpmNdvvoHD&t=AQLZM37qgVh2idqhDLQ",
-"52503632874282":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQI1bV1B0doxEkICguZ3-GqJapBxog4YjwypXdgs6Xu0kEaqfn-DXrQWw3lEhIP_fQdD3-Yc0lqPGbiouUZvBZvNwvA4wXnZV_H4EVzAMXYI213BNtwuUpOWiE1JucYipU-lz014OzoLz5pSqCXv4iXo6JPKsdZRzRoYFNgZdw26PXlwNg_5F10oqBTGNeGPrb4RNP9ka9ZOJKliep5MJ4Dw&t=AQIkUqqq8S3dau9vogA"
+"52538160873882":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQImPRP79fgb1VYlZH17u2QrghY_PDNRZQdguAwM2z0ybMRu1rNdFAyUcCczhXeOFM0QmOULQKoAqzcfaJTpZVaylATTbmfhs_3T6tW12l7NYnc2hVmz1J2wU0TpOD8B_M-IxOyCw8xg3D55TMNOFp9sRrBHwW_XYj1Fblb84KPO_0UEeGbMq-PnYU9ugISo0PLA1CgR4_EjuPyklTm0vUa_&t=AQKE7CeSaXdqFC6H0LQ",
+"6973422688078":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQIzRo2M5aI4Pb-sMaQZ3hhEN2CgGa7RlGyei3E6aYAUKicj3G4-e0WwYEuFuImQWpI2XCzT5bQv39DefxFUN8IeFZL85-cgrL5o1XP0kMZxRDTiNuvzjI91USE2gO6RxxcOKWdkRpiSKxMCtRGhSoYqyAT94j8UhrxDXarvK5oPAJ4y8jqzCHhh5EI1xOXt5stZJyCRyhS_A2d0DYhgET8i&t=AQJvtvKPUWVc_R2_4Pc",
+"52533687170482":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLhhEI4DzFHgmi_ur7o5LJ_sPv8V5TItDJycsxej5xhYGC7h8CirUvUqAT4SjfRJyVOTURIumHmCSN1rSVs-K3EpTMlPwf542rfR89mVtowEhHG28d5NEY3TAwBaPkxC_jbQNJzsTlvGoBTnJa1xS-vysprVI9BlI_9h2dFbkkMRAK67XGqn2kQI5UWeKm3WEirB3_NhVDUv_PY3JqcRfEj&t=AQImB7jA2ugfxgc1kU4",
+"52530115390482":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJVLUJ8xznRE6ojXf-6q7j6Pf7LztztKSzwiLRCi1Qe0hstYrVBLvjqgNsbITBe6ZU00nS6Hv5rHA_EYsdawvfH0DvFgQarOGTB6nT87H2_arFhoUtZXw9nItkQTDzR3WE5BCbAAFWmzpYjqIBiOJYTORTkk6aQCLivlKdLT2o4LnyK5mmU_7GUwfQ4csHdwE7P2Zi7NqI8D5m8VrlHMzY7&t=AQIxyVytfg6LEvCMIqo",
+"6958422229678":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQIFdrSJvvCYZAl8NlIR6sW2qCktDdqrn4cmlK05Rn6O-2yzhwQ7huTBLwwem3feLUlz8uebdD7ufVk2O21co2N9_WfZgfW634_H5E-SuIvIwY-v1D5CSZkePXEfjg1rtp-m4bSk1Xx0tI87W5jU1nCT816YG13DODW3dz4zSflOFUGApf7X1MHVtW4fVV_Tm4_W8A7cI5M-iFCjILWkzTZS&t=AQIWHMD0-C2n1CAA0v0",
+"6969966232478":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJpybkPfGUIbR7d5SPbrZh-9e2BySHt2Ffy9ieDsF5qn3K9Gmm109wcyfZAEIxcg1Bf-orFQpeGcOX0j2Siv_M0by4Emz8vt2bayK_1v4L9HsLD6L8Nr1D6mHz16h-XmvGwNpWJ4YNEUZNxDjsJENj4QABowWpuO6LRWHiMFIIcEsICCML4szZwIsY4A5hZvJbCh49yyFHQDOfCEjavU-qE&t=AQIHWg_DFfS3V7ekD3Y",
+"52514276901482":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQIOqdBiXn1p6MEQEdOYWKxsFE-ddqMEY1zh5z3qdbzGD--6l9A5KvTs_OJkxEYhfTtgzkuT9jZ7lvWN5sNQsgkO_-46JFyYiOvGhiEEv38KmiejezKCqFwQbCKLWgRR0Qbw3GMhVy0jXnfZk3FH1Be88CEijK5ZKDqM6n7uP4OpS56slcYM2DMD2ui5Y4jNhyNOD_YqQLvINyvcxvdrJLm5&t=AQJUeg5GwYTY0F4caK4",
+"52514223353282":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQIbnrp1-HI58g-s4x7z141rECuLXhpAJtHjFpSfWkjenJB9D3AbA9upbyogZFwmXtqCb88FcsJUmybLicb2etO-soDduLcd2g3CkoHiyFDv9Wm41hkN0e70JHzsd0qAr4smQ-ESJ3-I-BlQv0A6vP3Vwy0ORjJJPc8PddLe9Y9FFwTnwIOIaWlIuG2Sr2NnSG30vmKc9sAqo7yF31XvAhbH&t=AQITBgAfeQ6krh9QBfM",
+"52514199073882":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLZlpr1GAbzzQ7ReSdO3XuPOiAbiV6lTiYg3Z2WEVWijLdINWHDPEAtS5yBjOlI0CwptV8SyoXqR-AIQOZJ-Eu1dlhXf12AsYa7UoAR78yTRXboWB8xIpf_XRm4U1aEkYgqtFMxtBFkLEwO5bvm_T9eyWrt5GsJutf3FEAaiOlQsmNLp4YLfOWDVAkH0hMP2uh_UgFQWSc-H56kdqsdmhRV&t=AQIie_fICP2W0cCy3t8",
+"52528248630482":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQI6HHA_lvb1bf1iX07ei4Zn7HHmF8TQq-lSmgkVfVSvIcq2eyi_rxGCPdWVAQeWT5v27K-3dyTyYz65qA3D0vwnRd9ztErXSjmUwJ97ecCaR5ztgqdAI5X30U2yaCQrmuHvS6Q-AYyOVFNgLt3sEzxCqdDphkxoF1-kd2Hy5U1DaeOhO1xg7pvgqrF0qI-UORZXJhmBo2_VziGAUmC-Mla2&t=AQKw_ecMg2jct78CJkk",
+"6958428746078":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLeAmWhcatst-eyBQKkfLWBrkcDpC8uhHXU2OoyyYol2_PsVN7Gu8XteLprpYAdlW7Kn3pR1nMJn1NqsHfQCoH34j47aX4xZ3Sh0LGSwyZ7NWVFeLH5rDrnFPAIxly_Dkyue2iuz49OY7LhZNMuHhCS2SOB3g6et3yMYnSTXm9nmUwtJZkeLV8GaTWSDvjBCkOM3xWjefBHpvLjDgf69hiw&t=AQL4lZadFRWcTei-BMA",
+"6948492896478":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJ2JIIYSdomt1fhX-VIuRMgLtcZcJIRpVGDgAjJkC0VVG0ca3N1iJ2uQ-5PGa9wWEoqGd8dqmyNEPAai3Dbki7SyFag6oIh8kYWdPOkOyNXl2D5onCqOT-hDtbKY4M2fNa8CwXHpb2Qk58YK5_SazPRPosesmE6hx4fAjh7UPh_A8lb7tK3AJxJKRwubB5rJGazm7IqpGHinFWIl_7tYSxe&t=AQLeBtZ9fjudM0vJRtE",
+"52529627709682":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLXXgemTcezgvcpRqDn5MmARLIidW5pixxbBx8_38nYZ7T8FmIQU6No_YtdvpxZvih9lHjzYvb4rj0-LzKicnp_esMiTRJJ06nrqA8_SWKt-usXOItrj67c0KVdT5oj8opSp_1VxhLp5tbl0EGUHJbuk5tcXDyOah5m-IGGGxMXw8TR6c9rQ0o3oS_WwV_QBnwVqBaP7cK3yslxAxfhtitw&t=AQIcIabCa7DjYf5RzZE",
+"52533610786482":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJ4XEZC6NkSBbR6IYCs8Udqx5VMxdcX9li_faWuJMNTDIZ8JkYOEVjwH2q5Ht4gYZHEgRNmjftuoMs7PO510Hmf-OZF6mXniCxMfNzK35NPmV65qyI56O5g4CHsNzDvcSnAwR-iKt_5g_8VsjCTx1svbVTjazvVQlCCoASVpOglQrxUfrOa6L3K3_Ylu26prA-BwuwGSR6E0GcShxbbJzlW&t=AQIUrqrqVShq67TYcdM",
+"52533610786682":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLaVhUF1h_QP5HZA0ZkXMvI_C1KwdFbRXVZtO4oQ8ESD1rDZnW913hN3cJSTZP-Z5LcFddzzGwoxaxM34BOAEdj2HuFqc7z-e0SvBtVZyUFylHvJxFaIF5HTncoK805f5fRFAniAgGP0wEKASN5W4ftoOkZjxih01ebXMXgNzg__wNt6Gn4pu-jeObU3tHjP0-Wc81reXlHkXClYKOaq8nz&t=AQLho_p0sQTFh6VgDGw",
+"52530105785682":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQIiaPlGbqIlcQy88dTR8-HjO13No__20pJsa10NCxrStPvH_iK_4CljnN_fuEMBkTxhdxsTwBveY7Y0xBjYeh03pFTlli-ZVtu3J0IHJ3ae1s75zW-XxHoSmW67uY2BkKsk2Mce_FMDtJenpCFlDl4qSi5AgmQs6g_o6jCcZZDzRMVdV0FXwQES7k0Xkb_M6fh2FwdsiUkenm8j7xzx4N7h&t=AQIfV-SeDfD9mkQDg4Q",
+"52514276900882":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQJJsDi_WE2HHZTCe-_QLS7UON5WSXXyu6rs6XgYn-V6eR0V05YjQVF4eS-IN-GOp0IKYaX5ACUfra8TkhyuuVtj4MZEedhEDOPbEimimu09VKDsaesmHlpF-LQV9DNdbecTnIaftlANkCNwYMq5trfP9MdnfRZtAPOe-wjWtxpKZp_GHPdXDFbsYQpOsii2mWMJgiFlhj64ErTwORX_jxZG&t=AQJ1QM-rei005U91F1k",
+"52514276900282":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQK37cSru_kVMkt8QUQzpeHF3H2P05o93Ip_NTtCO3wRhdwLDgdAJad-IidkLFgQ9rZ3N02Yyklucs-mbTGTlmczCHY0uA66iic2_uXc8jJtgb3KDwEeQfZtQrsq-kFnId6dVlkTDnyx4ZUH38KPsOkEi5I3gy-FHNmaR1h6Ych68wNWg4TAds9Ggi58e8zhYeL1wDycD8T9T0HTk-IFOJZ0&t=AQI9ve_o3fnvmfYeQEU",
+"6973415546278":"https://business.facebook.com/ads/api/preview_iframe.php?d=AQLwf3ENvCbK7fyBcEuxQ3J3E2EBofJa1JDp5wQsvbxjCr-40eRijyruJ6jFbGMXUvXVGUArXjRq_QgGfP9mMBDnprscwltQa5qCN1AbwP-YB51B4HnCL3ejAWm5e_PcRjootFMNSan11NnPucJbSJZS5f-WOcHI0ditm8spaJAjluanI4MSctzeZW7GmrKmpwKdvR4l_J23QaAqCw7jtpbl&t=AQL8oNtMV8o2jLFJZnI"
 };
 
 const W={
+"2026-06-30":[
+  {id:"52530115390482",name:"VID_1_Regalo-Nevera-JUNIO",                              created:"2026-06-23",spend:615.89, purchases:167,ctr:0.88,cpa:3.69, type:"VID"},
+  {id:"6969966232478", name:"VID_UGC_PROS_Smilados",                                  created:"2026-04-30",spend:343.53, purchases:107,ctr:0.84,cpa:3.21, type:"VID"},
+  {id:"6958422229678", name:"VID - Suscripción Hook 1 \"Sabias que puedes tener\"",   created:"2026-04-13",spend:552.84, purchases:102,ctr:1.03,cpa:5.42, type:"VID"},
+  {id:"52514276901482",name:"VID_Dudas Tarritos - Copia",                             created:"2026-06-11",spend:1721.13,purchases:59, ctr:2.19,cpa:29.17,type:"VID"},
+  {id:"52514223353282",name:"VID_UGC- Gazpazchito - Hook 2",                         created:"2026-06-11",spend:206.08, purchases:38, ctr:1.32,cpa:5.42, type:"VID"},
+  {id:"52514199073882",name:"VID_UGC- Gazpazchito - Hook 1 \"Con este calor\"",      created:"2026-06-11",spend:252.08, purchases:28, ctr:0.89,cpa:9.00, type:"VID"},
+  {id:"52538160873882",name:"VID - Suscripción Hook 1 \"La forma más fácil\"",       created:"2026-06-30",spend:123.46, purchases:16, ctr:1.01,cpa:7.72, type:"VID"},
+  {id:"52528248630482",name:"VID_Paid_Partnership_Juan Llorca_Gazpachito",           created:"2026-06-22",spend:123.17, purchases:9,  ctr:2.10,cpa:13.69,type:"VID"},
+  {id:"6973422688078", name:"CARR_Lanzamiento Gazpachito - Contenido orgánico",      created:"2026-05-05",spend:95.10,  purchases:9,  ctr:0.98,cpa:10.57,type:"VID"},
+  {id:"6958428746078", name:"VID - Suscripción Hook 2",                              created:"2026-04-13",spend:0,      purchases:0,  ctr:0,   cpa:0,    type:"VID"},
+  {id:"52533687170482",name:"Pantalón",                                               created:"2026-06-26",spend:1075.46,purchases:4,  ctr:0.17,cpa:268.87,type:"VID"},
+  {id:"6948492896478", name:"VID_ Paid_Partnership_Juan Llorca",                     created:"2026-03-27",spend:4.17,   purchases:0,  ctr:3.20,cpa:0,    type:"VID"},
+  {id:"52533610786482",name:"IMG 1_Regalo-Nevera-SUBS",                              created:"2026-06-26",spend:1438.26,purchases:232,ctr:0.75,cpa:6.20, type:"IMG"},
+  {id:"52533610786682",name:"IMG_2_Regalo-Nevera-SUBS",                             created:"2026-06-26",spend:306.06, purchases:58, ctr:0.70,cpa:5.28, type:"IMG"},
+  {id:"52529627709682",name:"IMG 1_Regalo-Nevera-JUNIO",                            created:"2026-06-23",spend:0,      purchases:0,  ctr:0,   cpa:0,    type:"IMG"},
+  {id:"52530105785682",name:"IMG_2_Regalo-Nevera-JUNIO",                            created:"2026-06-23",spend:0,      purchases:0,  ctr:0,   cpa:0,    type:"IMG"},
+  {id:"6973415546278", name:"IMA_Lanzamiento Gazpachito - el primer gazpacho",      created:"2026-05-05",spend:142.19, purchases:14, ctr:0.79,cpa:10.16,type:"IMG"},
+  {id:"52514276900882",name:"IMA_Comparativa platitos - macarrones - Copia",        created:"2026-06-11",spend:811.40, purchases:4,  ctr:0.93,cpa:202.85,type:"IMG"},
+  {id:"52514276900282",name:"IMA_Comparativa platitos - Rabioli - Copia",            created:"2026-06-11",spend:128.18, purchases:0,  ctr:1.00,cpa:0,    type:"IMG"}
+],
 "2026-06-22":[
   {id:"52530115390482",name:"VID_1_Regalo-Nevera-JUNIO",                        created:"2026-06-23",spend:213.54, purchases:102,ctr:1.77,cpa:2.09, type:"VID"},
   {id:"6958422229678", name:"VID - Suscripción Hook 1 \"Sabias que puedes tener\"",created:"2026-04-13",spend:678.20, purchases:79, ctr:1.06,cpa:8.58, type:"VID"},
@@ -159,35 +159,27 @@ const W={
   {id:"52514223353282",name:"VID_UGC- Gazpazchito - Hook 2",                    created:"2026-06-11",spend:576.03, purchases:47, ctr:1.15,cpa:12.26,type:"VID"},
   {id:"52528248630482",name:"VID_Paid_Partnership_Juan Llorca_Gazpachito",      created:"2026-06-22",spend:525.75, purchases:19, ctr:2.30,cpa:27.67,type:"VID"},
   {id:"52514199073882",name:"VID_UGC- Gazpazchito - Hook 1 \"Con este calor\"", created:"2026-06-11",spend:86.68,  purchases:7,  ctr:0.74,cpa:12.38,type:"VID"},
-  {id:"6958428746078", name:"VID - Suscripción Hook 2 \"Si tienes un bebé...\"",created:"2026-04-13",spend:27.31,  purchases:4,  ctr:1.15,cpa:6.83, type:"VID"},
-  {id:"52529903303282",name:"Fútbol -2ªoleada",                                 created:"2026-06-23",spend:874.18, purchases:4,  ctr:1.31,cpa:218.54,type:"VID"},
-  {id:"52530286701682",name:"Pantalón",                                          created:"2026-06-23",spend:869.62, purchases:2,  ctr:1.11,cpa:434.81,type:"VID"},
-  {id:"6979351783078", name:"Fútbol - 2ªoleada",                                created:"2026-06-23",spend:1429.67,purchases:1,  ctr:1.85,cpa:1429.67,type:"VID"},
+  {id:"6958428746078", name:"VID - Suscripción Hook 2",                         created:"2026-04-13",spend:27.31,  purchases:4,  ctr:1.15,cpa:6.83, type:"VID"},
+  {id:"52533687170482",name:"Pantalón",                                          created:"2026-06-23",spend:869.62, purchases:2,  ctr:1.11,cpa:434.81,type:"VID"},
   {id:"6948492896478", name:"VID_ Paid_Partnership_Juan Llorca",                created:"2026-03-27",spend:1.24,   purchases:1,  ctr:4.32,cpa:1.24, type:"VID"},
   {id:"52529627709682",name:"IMG 1_Regalo-Nevera-JUNIO",                        created:"2026-06-23",spend:616.03, purchases:277,ctr:1.90,cpa:2.22, type:"IMG"},
   {id:"52533610786482",name:"IMG 1_Regalo-Nevera-SUBS",                         created:"2026-06-26",spend:356.53, purchases:55, ctr:0.93,cpa:6.48, type:"IMG"},
   {id:"52533610786682",name:"IMG_2_Regalo-Nevera-SUBS",                         created:"2026-06-26",spend:158.34, purchases:22, ctr:0.89,cpa:7.20, type:"IMG"},
   {id:"52530105785682",name:"IMG_2_Regalo-Nevera-JUNIO",                        created:"2026-06-23",spend:26.31,  purchases:18, ctr:1.75,cpa:1.46, type:"IMG"},
   {id:"52514276900882",name:"IMA_Comparativa platitos - macarrones - Copia",    created:"2026-06-11",spend:26.78,  purchases:1,  ctr:1.61,cpa:26.78,type:"IMG"},
-  {id:"52514276900282",name:"IMA_Comparativa platitos - Rabioli - Copia",       created:"2026-06-11",spend:26.61,  purchases:0,  ctr:1.97,cpa:0,    type:"IMG"},
-  {id:"52514276900682",name:"IMA_ Paid_Partnership_Juan Llorca - Copia",        created:"2026-06-11",spend:0.57,   purchases:0,  ctr:3.33,cpa:0,    type:"IMG"}
+  {id:"52514276900282",name:"IMA_Comparativa platitos - Rabioli - Copia",       created:"2026-06-11",spend:26.61,  purchases:0,  ctr:1.97,cpa:0,    type:"IMG"}
 ],
 "2026-06-16":[
-  {id:"52518255264882",name:"VID_Genérico- Promo - 25% en packs - Copia",created:"2026-06-15",spend:1230.73,purchases:236,ctr:0.71,cpa:5.21, type:"VID"},
-  {id:"6969966232478", name:"VID_UGC_PROS_Smilados",                      created:"2026-04-30",spend:344.87, purchases:148,ctr:0.77,cpa:2.33, type:"VID"},
   {id:"52514276901482",name:"VID_Dudas Tarritos - Copia",                 created:"2026-06-11",spend:2026.30,purchases:81, ctr:2.45,cpa:25.02,type:"VID"},
   {id:"6958422229678", name:"VID - Suscripción Hook 1",                   created:"2026-04-13",spend:670.02, purchases:81, ctr:1.07,cpa:8.27, type:"VID"},
-  {id:"52518254859482",name:"VID_Genérico- Promo - 25% en packs",         created:"2026-06-15",spend:863.71, purchases:77, ctr:0.66,cpa:11.22,type:"VID"},
+  {id:"6969966232478", name:"VID_UGC_PROS_Smilados",                      created:"2026-04-30",spend:344.87, purchases:148,ctr:0.77,cpa:2.33, type:"VID"},
   {id:"52514223353282",name:"VID_UGC- Gazpazchito - Hook 2",              created:"2026-06-11",spend:614.98, purchases:76, ctr:1.08,cpa:8.09, type:"VID"},
-  {id:"52518255264682",name:"VID_Consumo_Smilados- Promo - 25% en packs", created:"2026-06-15",spend:186.85, purchases:57, ctr:0.68,cpa:3.28, type:"VID"},
-  {id:"52518253256282",name:"VID_Consumo_Smilados- 25% en packs (v2)",    created:"2026-06-15",spend:75.89,  purchases:10, ctr:0.69,cpa:7.59, type:"VID"},
-  {id:"52514199073882",name:"VID_UGC- Gazpazchito - Hook 1",              created:"2026-06-11",spend:49.87,  purchases:9,  ctr:0.95,cpa:5.54, type:"VID"},
   {id:"52528248630482",name:"VID_Paid_Partnership_Juan Llorca_Gazpachito",created:"2026-06-22",spend:71.76,  purchases:2,  ctr:2.28,cpa:35.88,type:"VID"},
   {id:"6958428746078", name:"VID - Suscripción Hook 2",                   created:"2026-04-13",spend:31.86,  purchases:2,  ctr:1.07,cpa:15.93,type:"VID"},
-  {id:"6973419646878", name:"VID_Lanzamiento Gazpachito",                 created:"2026-05-05",spend:0,      purchases:1,  ctr:0,   cpa:0,    type:"VID"},
-  {id:"52523846493682",name:"IMG 2 - 25% Descuento junio 2026",           created:"2026-06-19",spend:938.92, purchases:142,ctr:0.92,cpa:6.61, type:"IMG"},
-  {id:"52523669186482",name:"IMG - 25% Descuento junio 2026",             created:"2026-06-19",spend:60.94,  purchases:21, ctr:1.18,cpa:2.90, type:"IMG"},
-  {id:"52518254859482",name:"IMG 1 - 25% Descuento junio 2026",           created:"2026-06-19",spend:45.90,  purchases:5,  ctr:1.18,cpa:9.18, type:"IMG"},
+  {id:"52514199073882",name:"VID_UGC- Gazpazchito - Hook 1",              created:"2026-06-11",spend:49.87,  purchases:9,  ctr:0.95,cpa:5.54, type:"VID"},
+  {id:"52533610786482",name:"IMG 1_Regalo-Nevera-SUBS",                   created:"2026-06-26",spend:938.92, purchases:142,ctr:0.92,cpa:6.61, type:"IMG"},
+  {id:"52533610786682",name:"IMG_2_Regalo-Nevera-SUBS",                   created:"2026-06-26",spend:60.94,  purchases:21, ctr:1.18,cpa:2.90, type:"IMG"},
+  {id:"52529627709682",name:"IMG 1_Regalo-Nevera-JUNIO",                  created:"2026-06-23",spend:45.90,  purchases:5,  ctr:1.18,cpa:9.18, type:"IMG"},
   {id:"52514276900882",name:"IMA_Comparativa platitos - macarrones",      created:"2026-06-11",spend:4.16,   purchases:1,  ctr:1.80,cpa:4.16, type:"IMG"},
   {id:"52514276900282",name:"IMA_Comparativa platitos - Rabioli",          created:"2026-06-11",spend:12.30,  purchases:0,  ctr:1.89,cpa:0,    type:"IMG"},
   {id:"6948492896478", name:"IMA_ Paid_Partnership_Juan Llorca",           created:"2026-03-27",spend:3.38,   purchases:0,  ctr:3.79,cpa:0,    type:"IMG"}
@@ -197,56 +189,29 @@ const W={
   {id:"6958422229678", name:"VID - Suscripción Hook 1",                    created:"2026-04-13",spend:657.71, purchases:111,ctr:1.09,cpa:5.93, type:"VID"},
   {id:"52514223353282",name:"VID_UGC- Gazpazchito - Hook 2",               created:"2026-06-11",spend:366.28, purchases:76, ctr:0.82,cpa:4.82, type:"VID"},
   {id:"52514276901482",name:"VID_Dudas Tarritos - Copia",                  created:"2026-06-11",spend:1778.75,purchases:67, ctr:2.59,cpa:26.55,type:"VID"},
-  {id:"52518255264882",name:"VID_Genérico- Promo - 25% en packs - Copia",  created:"2026-06-15",spend:146.95, purchases:54, ctr:0.90,cpa:2.72, type:"VID"},
-  {id:"6973419646878", name:"VID_Lanzamiento Gazpachito",                  created:"2026-05-05",spend:222.60, purchases:33, ctr:0.73,cpa:6.75, type:"VID"},
-  {id:"52518254859482",name:"VID_Genérico- Promo - 25% en packs",          created:"2026-06-15",spend:193.71, purchases:32, ctr:0.76,cpa:6.05, type:"VID"},
-  {id:"52518255264682",name:"VID_Consumo_Smilados- 25% en packs",          created:"2026-06-15",spend:121.94, purchases:27, ctr:0.74,cpa:4.52, type:"VID"},
   {id:"52514199073882",name:"VID_UGC- Gazpazchito - Hook 1",               created:"2026-06-11",spend:69.06,  purchases:10, ctr:0.53,cpa:6.91, type:"VID"},
-  {id:"52518253256282",name:"VID_Consumo_Smilados- 25% en packs (v2)",     created:"2026-06-15",spend:78.98,  purchases:9,  ctr:0.75,cpa:8.78, type:"VID"},
   {id:"6958428746078", name:"VID - Suscripción Hook 2",                    created:"2026-04-13",spend:25.42,  purchases:6,  ctr:1.18,cpa:4.24, type:"VID"},
-  {id:"6996619093078", name:"IMA_ Regalo cuchara - consumo Gazpachito",    created:"2026-05-28",spend:0,      purchases:12, ctr:0,   cpa:0,    type:"IMG"},
-  {id:"52503632881282",name:"IMA_ Regalo cuchara - bodegón (jun)",         created:"2026-06-02",spend:0,      purchases:4,  ctr:0,   cpa:0,    type:"IMG"},
-  {id:"6996644941678", name:"IMA_ Regalo cuchara - bodegón (may)",         created:"2026-05-28",spend:0,      purchases:3,  ctr:0,   cpa:0,    type:"IMG"},
-  {id:"6996658783478", name:"IMA_ Regalo cuchara - Tarrito Merluza",       created:"2026-05-28",spend:0,      purchases:2,  ctr:0,   cpa:0,    type:"IMG"},
   {id:"52514276900882",name:"IMA_Comparativa platitos - macarrones",       created:"2026-06-11",spend:8.47,   purchases:0,  ctr:1.53,cpa:0,    type:"IMG"},
   {id:"52514276900282",name:"IMA_Comparativa platitos - Rabioli",           created:"2026-06-11",spend:125.47, purchases:0,  ctr:1.68,cpa:0,    type:"IMG"},
   {id:"6973415546278", name:"IMA_Lanzamiento Gazpachito - el primer gazpacho",created:"2026-05-05",spend:0.49,purchases:0,  ctr:0.56,cpa:0,    type:"IMG"},
-  {id:"6973407947278", name:"IMA_Lanzamiento Gazpachito - nuevo tarrito",  created:"2026-05-05",spend:0.09,   purchases:0,  ctr:2.86,cpa:0,    type:"IMG"},
   {id:"6948492896478", name:"IMA_ Paid_Partnership_Juan Llorca",            created:"2026-03-27",spend:1.95,   purchases:0,  ctr:2.96,cpa:0,    type:"IMG"}
 ],
 "2026-06-02":[
   {id:"6969966232478", name:"VID_UGC_PROS_Smilados",                       created:"2026-04-30",spend:364.21, purchases:82, ctr:1.29,cpa:4.44, type:"VID"},
   {id:"6958422229678", name:"VID - Suscripción Hook 1",                    created:"2026-04-13",spend:692.81, purchases:81, ctr:1.22,cpa:8.55, type:"VID"},
-  {id:"6973419646878", name:"VID_Lanzamiento Gazpachito",                  created:"2026-05-05",spend:653.71, purchases:62, ctr:0.83,cpa:10.54,type:"VID"},
-  {id:"6996661665678", name:"VID_ Regalo cuchara",                         created:"2026-05-28",spend:22.63,  purchases:4,  ctr:0.40,cpa:5.66, type:"VID"},
-  {id:"52503632874282",name:"VID_ Regalo cuchara (jun)",                   created:"2026-06-02",spend:20.32,  purchases:1,  ctr:0.87,cpa:20.32,type:"VID"},
+  {id:"52514276901482",name:"VID_Dudas Tarritos",                          created:"2026-06-11",spend:653.71, purchases:62, ctr:0.83,cpa:10.54,type:"VID"},
   {id:"6958428746078", name:"VID - Suscripción Hook 2",                    created:"2026-04-13",spend:27.54,  purchases:1,  ctr:1.53,cpa:27.54,type:"VID"},
-  {id:"6996619093078", name:"IMA_ Regalo cuchara - consumo Gazpachito",    created:"2026-05-28",spend:1556.46,purchases:169,ctr:0.74,cpa:9.21, type:"IMG"},
-  {id:"52503632881282",name:"IMA_ Regalo cuchara - bodegón (jun)",         created:"2026-06-02",spend:1460.95,purchases:147,ctr:0.68,cpa:9.94, type:"IMG"},
-  {id:"6996644941678", name:"IMA_ Regalo cuchara - bodegón (may)",         created:"2026-05-28",spend:193.48, purchases:22, ctr:0.64,cpa:8.79, type:"IMG"},
-  {id:"52503632881082",name:"IMA_ Regalo cuchara - Tarrito Merluza (jun)", created:"2026-06-02",spend:164.17, purchases:12, ctr:1.34,cpa:13.68,type:"IMG"},
-  {id:"6996655181878", name:"IMA_ Regalo cuchara - platitos",              created:"2026-05-28",spend:71.22,  purchases:8,  ctr:1.14,cpa:8.90, type:"IMG"},
+  {id:"52533610786482",name:"IMG 1_Regalo-Nevera-SUBS",                    created:"2026-06-26",spend:1556.46,purchases:169,ctr:0.74,cpa:9.21, type:"IMG"},
+  {id:"52533610786682",name:"IMG_2_Regalo-Nevera-SUBS",                    created:"2026-06-26",spend:1460.95,purchases:147,ctr:0.68,cpa:9.94, type:"IMG"},
+  {id:"52529627709682",name:"IMG 1_Regalo-Nevera-JUNIO",                   created:"2026-06-23",spend:193.48, purchases:22, ctr:0.64,cpa:8.79, type:"IMG"},
+  {id:"52530105785682",name:"IMG_2_Regalo-Nevera-JUNIO",                   created:"2026-06-23",spend:164.17, purchases:12, ctr:1.34,cpa:13.68,type:"IMG"},
   {id:"6973415546278", name:"IMA_Lanzamiento Gazpachito - el primer gazpacho",created:"2026-05-05",spend:0.08,purchases:0,  ctr:0,   cpa:0,    type:"IMG"},
-  {id:"6973407947278", name:"IMA_Lanzamiento Gazpachito - nuevo tarrito",  created:"2026-05-05",spend:0.06,   purchases:0,  ctr:0,   cpa:0,    type:"IMG"}
-],
-"2026-05-26":[
-  {id:"6969966232478", name:"VID_UGC_PROS_Smilados",                       created:"2026-04-30",spend:341.56, purchases:114,ctr:1.00,cpa:3.00, type:"VID"},
-  {id:"6973419646878", name:"VID_Lanzamiento Gazpachito",                  created:"2026-05-05",spend:630.59, purchases:69, ctr:0.77,cpa:9.14, type:"VID"},
-  {id:"6958422229678", name:"VID - Suscripción Hook 1",                    created:"2026-04-13",spend:670.07, purchases:66, ctr:1.13,cpa:10.15,type:"VID"},
-  {id:"6958428746078", name:"VID - Suscripción Hook 2",                    created:"2026-04-13",spend:21.46,  purchases:6,  ctr:1.30,cpa:3.58, type:"VID"},
-  {id:"6996661665678", name:"VID_ Regalo cuchara",                         created:"2026-05-28",spend:16.61,  purchases:3,  ctr:0.80,cpa:5.54, type:"VID"},
-  {id:"6996619093078", name:"IMA_ Regalo cuchara - consumo Gazpachito",    created:"2026-05-28",spend:856.36, purchases:107,ctr:1.07,cpa:8.00, type:"IMG"},
-  {id:"6996644941678", name:"IMA_ Regalo cuchara - bodegón (may)",         created:"2026-05-28",spend:271.66, purchases:43, ctr:0.94,cpa:6.32, type:"IMG"},
-  {id:"6969943500478", name:"PROS/RET_Prensa_Concódigo/Alberto",           created:"2026-04-30",spend:179.42, purchases:27, ctr:0.87,cpa:6.65, type:"IMG"},
-  {id:"6996658783478", name:"IMA_ Regalo cuchara - Tarrito Merluza",       created:"2026-05-28",spend:101.12, purchases:8,  ctr:1.67,cpa:12.64,type:"IMG"},
-  {id:"6996655181878", name:"IMA_ Regalo cuchara - platitos",              created:"2026-05-28",spend:34.17,  purchases:5,  ctr:1.27,cpa:6.83, type:"IMG"},
-  {id:"6973415546278", name:"IMA_Lanzamiento Gazpachito - el primer gazpacho",created:"2026-05-05",spend:0.96,purchases:0,  ctr:0.28,cpa:0,    type:"IMG"},
-  {id:"6973407947278", name:"IMA_Lanzamiento Gazpachito - nuevo tarrito",  created:"2026-05-05",spend:0.40,   purchases:0,  ctr:0,   cpa:0,    type:"IMG"}
+  {id:"52514276900282",name:"IMA_Comparativa platitos - Rabioli",           created:"2026-06-11",spend:0.06,   purchases:0,  ctr:0,   cpa:0,    type:"IMG"}
 ]};
 
 const KEYS=Object.keys(W).sort().reverse();
 let idx=0,cur=[];
-const TODAY=new Date(2026,5,30);
+const TODAY=new Date(2026,6,7);
 
 function pd(s){const[y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d);}
 function fmtW(k){const mon=pd(k),sun=new Date(mon);sun.setDate(mon.getDate()+6);const f=d=>d.toLocaleDateString('es-ES',{day:'2-digit',month:'short'});return`${f(mon)} – ${f(sun)} · ${mon.getFullYear()}`;}
